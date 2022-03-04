@@ -55,7 +55,7 @@ AkihiroProject is licensed under [GNU Affero General Public License](https://www
 *   [X_ImFine](https://github.com/ximfine) :  XBot-REMIX
 
 ### Credits
-* [![TeamGeez](https://img.shields.io/static/v1?label=GeezProjects&message=contributions&color=critical)](https://github.com/vckyou/GeezProjects/graphs/contributors)
+* [![AkihiroProject](https://img.shields.io/badge/AkihiroProject-contributions-fuchsia)](https://github.com/akihiro69/AkihiroProject/graphs/contributors)
 * [Lonami](https://github.com/LonamiWebs/) for [Telethon.](https://github.com/LonamiWebs/Telethon)
 * [MarshalX](https://github.com/MarshalX) for [PyTgCalls.](https://github.com/MarshalX/tgcalls)
 

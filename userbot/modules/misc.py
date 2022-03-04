@@ -94,7 +94,7 @@ async def reedme(event):
     await edit_or_reply(
         event,
         "**Berikut sesuatu untuk kamu baca:**\n"
-        "\n🔸 [Userbot Repo](https://github.com/akihiro69/AkihiroUbot/blob/master/README.md)"
+        "\n🔸 [Userbot Repo](https://github.com/akihiro69/AkihiroProject/blob/master/README.md)"
         "\n🔸 [List Variabel Heroku untuk Akihiro-Project](https://telegra.ph/List-Variable-Heroku-Untuk-GeezProjects-01-31)"
         "\n🔸 [Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)",
     )
@@ -119,16 +119,16 @@ async def repo_is_here(event):
     xx = await edit_or_reply(event, "`Processing...`")
     await xx.edit(
         f"╭‒─‒──────────────\n"
-        f"│    𝑻𝒉𝒂𝒏𝒌𝒔 𝒇𝒐𝒓 𝑼𝒔𝒊𝒏𝒈 𝑴𝒆\n"
+        f"│    𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝗨𝘀𝗶𝗻𝗴 𝗠𝗲\n"
         f"├‒─‒─────────────\n"
         f"│`Bot Ver    :` `{BOT_VER}@{branch}`\n"
         f"│`Support    :` [Akihiro Support](t.me/AkihiroSupport)\n"
         f"│`Channel    :` [Channel Support](t.me/AkihiroUpdate)\n"
         f"│`Owner Repo :` [agung☂̈́](t.me/akihiro69)\n"
         f"├‒─‒──────────────\n"
-        f"│𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 : [𝘼𝙠𝙞𝙝𝙞𝙧𝙤 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://github.com/akihiro69/AkihiroUbot)\n"
+        f"│𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 : [𝗔𝗸𝗶𝗵𝗶𝗿𝗼 𝗣𝗿𝗼𝗷𝗲𝗰𝘁](https://github.com/akihiro69/AkihiroProject)\n"
         f"╰‒─‒─────────────\n"
-        f"  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/akihiro69/AkihiroUbot/blob/master/LICENSE)"
+        f"  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/akihiro69/AkihiroProject/blob/master/LICENSE)"
     )
 
 

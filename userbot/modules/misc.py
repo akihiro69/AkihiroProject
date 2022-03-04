@@ -69,7 +69,7 @@ async def shutdown_bot(event):
             "**#SHUTDOWN** \n"
             "**GeezProjects** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
         )
-    await edit_or_reply(event, "**GeezProjects Berhasil di matikan!**")
+    await edit_or_reply(event, "**AkihiroUserBot Berhasil di matikan!**")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
     else:
@@ -80,10 +80,10 @@ async def shutdown_bot(event):
 async def restart_bot(event):
     if event.sender_id in SUDO_USERS:
         return
-    await edit_or_reply(event, "**GeezProjects Berhasil di Restart**")
+    await edit_or_reply(event, "**AkihiroUserBot Berhasil di Restart**")
     if BOTLOG_CHATID:
         await event.client.send_message(
-            BOTLOG_CHATID, "#RESTART \n" "**GeezProjects Berhasil Di Restart**"
+            BOTLOG_CHATID, "#RESTART \n" "**AkihiroUserBot Berhasil Di Restart**"
         )
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -94,8 +94,8 @@ async def reedme(event):
     await edit_or_reply(
         event,
         "**Berikut sesuatu untuk kamu baca:**\n"
-        "\n🔸 [Userbot Repo](https://github.com/vckyou/GeezProjects/blob/master/README.md)"
-        "\n🔸 [List Variabel Heroku untuk Geez-Userbot](https://telegra.ph/List-Variable-Heroku-Untuk-GeezProjects-01-31)"
+        "\n🔸 [Userbot Repo](https://github.com/akihiro69/AkihiroUbot/blob/master/README.md)"
+        "\n🔸 [List Variabel Heroku untuk Akihiro-Project](https://telegra.ph/List-Variable-Heroku-Untuk-GeezProjects-01-31)"
         "\n🔸 [Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)",
     )
 
@@ -122,13 +122,13 @@ async def repo_is_here(event):
         f"│    __Thanks For Using Me__\n"
         f"├‒─‒─────────────\n"
         f"│`Bot Ver    :` `{BOT_VER}@{branch}`\n"
-        f"│`Support    :` [Geez Support](t.me/GeezSupport)\n"
-        f"│`Channel    :` [Channel Support](t.me/GeezProject)\n"
-        f"│`Owner Repo :` [vickyaz](t.me/vckyaz)\n"
+        f"│`Support    :` [Geez Support](t.me/AkihiroSupport)\n"
+        f"│`Channel    :` [Channel Support](t.me/AkihiroUpdate)\n"
+        f"│`Owner Repo :` [agung☂̈́](t.me/akihiro69)\n"
         f"├‒─‒──────────────\n"
-        f"│`Repository :` [𝙂𝙚𝙚𝙯 𝙋𝙧𝙤𝙟𝙚𝙘𝙩𝙨](https://github.com/Vckyou/GeezProjects)\n"
+        f"│`Repository :` [𝙂𝙚𝙚𝙯 𝙋𝙧𝙤𝙟𝙚𝙘𝙩𝙨](https://github.com/akihiro69/AkihiroUbot)\n"
         f"╰‒─‒─────────────\n"
-        f"  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Vckyou/GeezProjects/blob/master/LICENSE)"
+        f"  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/akihiro69/AkihiroUbot/blob/master/LICENSE)"
     )
 
 

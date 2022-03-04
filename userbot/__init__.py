@@ -130,8 +130,8 @@ LOAD = os.environ.get("LOAD", "").split()
 NO_LOAD = os.environ.get("NO_LOAD", "").split()
 
 # Bleep Blop, this is a bot ;)
-PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
-PM_LIMIT = int(os.environ.get("PM_LIMIT", 6))
+PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
+PM_LIMIT = int(os.environ.get("PM_LIMIT", 3))
 
 # Custom Handler command
 CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
@@ -139,8 +139,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "GeezSupport")
-CHANNEL = os.environ.get("CHANNEL", "GeezProject")
+GROUP = os.environ.get("GROUP", "AkihiroSupport")
+CHANNEL = os.environ.get("CHANNEL", "AkihiroUpdate")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -155,7 +155,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/vckyou/GeezProjects.git"
+    "UPSTREAM_REPO_URL", "https://github.com/akihiro69/AkihiroProject.git"
 )
 
 # Custom Name Sticker Pack
@@ -186,13 +186,13 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", "Hey, I Am Userbot.")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Geez")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Akihiro")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "⚡️")
 
 # Custom Emoji Alive
-INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "❍")
+INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "🍭")
 
 # Custom icon HELP
 ICON_HELP = os.environ.get("ICON_HELP", "ꖒ")
@@ -215,11 +215,11 @@ BOT_VER = os.environ.get("BOT_VER", "1.0.5")
 
 # Default .alive logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/8e256cb133087b060e288.png"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/8299c9db53a1393c81d0d.jpg"
 )
 
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/02b3dbeb4df30582f0d66.jpg"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/8299c9db53a1393c81d0d.jpg"
 )
 
 # Picture For VCPLUGIN
@@ -290,7 +290,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "GeezProjects"
+    session = "AkihiroProject"
 try:
     bot = TelegramClient(
         session=session,
@@ -317,7 +317,7 @@ async def check_botlog_chatid() -> None:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**GeezProjects v{BOT_VER} is back up and running!**\n\n"
+        f"**AkihiroProject v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text=f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮\n\n•  **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮\n\n•☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -575,7 +575,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**AkihiroUserBot Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
+                text = f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮\n\n☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞"
                 await event.edit(
                     text,
                     file=logogeez,

@@ -15,6 +15,12 @@
 [![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/vckyou/GeezProjects/blob/main/LICENSE)   
 ----
 
+<p align="center">
+   <a href="https://github.com/akihiro69/AkihiroProject"><img src="https://telegra.ph/file/5ed897c7b0c9e84d65327.png" alt="Geez Projects" width=400px></a>
+   <br>
+   <br>
+</p>
+
 [AkihiroProject](https://github.com/akihiro69/AkihiroProject) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
 
 Berbasis [Paperplane](https://github.com/RaphielGang/Telegram-UserBot) Dan [ProjectBish](https://github.com/adekmaulana/ProjectBish)
@@ -28,59 +34,17 @@ Bot ini dimaksudkan untuk bersenang-senang sekaligus membantu Anda
 mengelola grup secara efisien dan mengotomatiskan beberapa hal yang membosankan.
 Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ```
-<details>
-<summary><b>Deploy to VPS</b></summary>
-<br>
-    
-### REQUIREMENTS PACKAGE !
--  Update & upgrade VPS anda `sudo apt update && upgrade -y`
--  Install Git `sudo apt install git -y`
--  Install Python3 `sudo apt install python3`
--  Install PIP / PIP3 `sudo apt install python3-pip`
--  Install NodeJs 16.X `curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -` then do `sudo apt install -y nodejs vim`
--  Install FFMPEG `sudo apt install tree wget2 p7zip-full jq ffmpeg wget git -y`
--  Install Chrome `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb` lalu ketik `sudo apt install ./google-chrome-stable_current_amd64.deb`
-
-### Tutorial Deploy To VPS
-
--  `git clone https://github.com/akihiro69/AkihiroProject`
--  `cd AkihiroProject`
--  `pip3 install -r requirements.txt`
--  `mv sample_config.env config.env`
--  edit config.env Anda dan isi VARS menggunakan `nano config.env` `CTRL + S ` untuk menyimpan VARS Anda, gunakan `CTRL + X` untuk keluar dan kembali ke direktori GeezProjects
--  Buka SCRREN di VPS Anda `screen -S AkihiroProject`
--  Kemudian gunakan perintah ini untuk menyebarkan GeezProjects `python3 -m userbot`
-
-</details>
-
-<details>
-<summary><b>String Session</b></summary>
-<br>
-    
-> Anda memerlukan API_ID & API_HASH untuk menghasilkan sesi telethon. ambil APP ID dan API Hash di my.telegram.org
-<h4> Generate Session via Repl: </h4>    
-<p><a href="https://repl.it/@vckyou/String?lite=1&outputonly=1"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="200""/></a></p>
-<h4> Generate Session via Telegram StringGen Bot: </h4>    
-<p><a href="https://t.me/GeezStringBot"><img src="https://img.shields.io/badge/TG%20String%20Gen%20Bot-blueviolet?style=for-the-badge&logo=appveyor" width="200""/></a></p>
-    
-</details>
-
-<h4>DEPLOY VIA WEBSITE</h4>
-<a href="https://deploygeez.now.sh">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="deploy">
-</a>
 
 
 # License
 [![License](https://www.gnu.org/graphics/agplv3-155x51.png)](LICENSE)   
-GeezProjects is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
+AkihiroProject is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
 
 ---
 
-<details>
-    <summary>&#127942 <b>SPECIAL THANKS TO</b></summary><br/>
+    </br><summary><b/>SPECIAL THANKS TO</b></summary><br/>
 
-#### Thanks To [Everyone](https://github.com/vckyou/GeezProjects/graphs/contributors) Who Has Helped Make This Userbot Awesome!
+#### Thanks To [Everyone](https://github.com/akihiro69/AkihiroProject/graphs/contributors) Who Has Helped Make This Userbot Awesome!
 *   [AdekMaulana](https://github.com/adekmaulana) : ProjectBish
 *   [RaphielGang](https://github.com/RaphielGang) : Paperplane
 *   [Akihiro69](https://github.com/akihiro69/AkihiroProject) : AkihiroProject
@@ -99,5 +63,4 @@ GeezProjects is licensed under [GNU Affero General Public License](https://www.g
 
 > Made with 💕 by [akihiro69](https://t.me/akihiro69).    
 
-</details>
  

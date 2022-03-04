@@ -67,7 +67,7 @@ async def shutdown_bot(event):
         await event.client.send_message(
             BOTLOG_CHATID,
             "**#SHUTDOWN** \n"
-            "**GeezProjects** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
+            "**AkihiroUserbot** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
         )
     await edit_or_reply(event, "**AkihiroUserBot Berhasil di matikan!**")
     if HEROKU_APP is not None:

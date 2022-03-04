@@ -62,6 +62,7 @@ async def _(ping):
     await xx.edit("**Pinging...**")
     await xx.edit("**Pinging....**")
     await xx.edit("⚡")
+    await asyncio.sleep(3)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await ping.client.get_me()
@@ -75,15 +76,21 @@ async def _(ping):
     start = datetime.now()
     twing = await edit_or_reply(ping, "`Pinging....`")
     await twing.edit("**TWICE Ping!!!**")
+    await asyncio.sleep(2)
     await twing.edit("**Hana.**")
+    await asyncio.sleep(1)
     await twing.edit("**Dul..**")
+    await asyncio.sleep(1)
     await twing.edit("**Set...**")
+    await asyncio.sleep(1)
     await twing.edit("✨")
+    await asyncio.sleep(3)
     await twing.edit("**One In A Million...**")
+    await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await twing.edit(
-        f"**TWICEE IMNIDA!! 🍭**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
+        f"**TWICEE IMNIDA!! 🍭**\n**Twinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
     )
 
 
@@ -198,6 +205,8 @@ CMD_HELP.update(
         \n  ❍▸ : **Untuk menunjukkan ping userbot.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}pong`\
         \n  ❍▸ : **Sama seperti perintah ping\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}twing`\
+        \n  ❍▸ : **TWICE Ping\
     "
     }
 )

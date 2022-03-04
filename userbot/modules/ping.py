@@ -19,12 +19,12 @@ from userbot.events import register
 from userbot.utils import edit_or_reply, humanbytes, geez_cmd
 
 absen = [
-    "**Hadir bang** 😁",
-    "**Hadir kak** 😉",
-    "**Hadir dong** 😁",
-    "**Hadir ganteng** 🥵",
-    "**Hadir bro** 😎",
-    "**Hadir kak maap telat** 🥺",
+    "**Akihiro Hadir bang** 😁",
+    "**Akihiro Hadir kak** 😉",
+    "**Akihiro Hadir dong** 😁",
+    "**Akihiro Hadir ganteng** 🥵",
+    "**Akihiro Hadir bro** 😎",
+    "**Akihiro Hadir kak maap telat** 🥺",
 ]
 
 
@@ -75,7 +75,10 @@ async def _(ping):
     start = datetime.now()
     twing = await edit_or_reply(ping, "`Pinging....`")
     await twing.edit("**TWICE Ping!!!**")
-    await twing.edit("**Hana-Dul-Set**")
+    await twing.edit("**Hana.**")
+    await twing.edit("**Dul..**")
+    await twing.edit("**Set...**")
+    await twing.edit("✨")
     await twing.edit("**One In A Million...**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000

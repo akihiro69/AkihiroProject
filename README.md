@@ -2,7 +2,7 @@
 
 <p align="center">
 
-[![](https://img.shields.io/badge/GeezProjects-v.1.0.5-blue)](#)
+[![](https://ibb.co/7NsyNPz)](#)
 [![Stars](https://img.shields.io/github/stars/vckyou/GeezProjects?style=flat-square&color=yellow)](https://github.com/vckyou/GeezProjects/stargazers)
 [![Forks](https://img.shields.io/github/forks/vckyou/GeezProjects?style=flat-square&color=orange)](https://github.com/vckyou/GeezProjects/fork)
 [![Size](https://img.shields.io/github/repo-size/vckyou/GeezProjects?style=flat-square&color=green)](https://github.com/vckyou/GeezProjects/)   
@@ -17,12 +17,12 @@
 ----
 
 <p align="center">
-   <a href="https://github.com/vckyou/GeezProjects"><img src="https://telegra.ph/file/8e256cb133087b060e288.png" alt="Geez Projects" width=400px></a>
+   <a href="https://github.com/akihiro69/AkihiroProject"><img src="https://telegra.ph/file/8e256cb133087b060e288.png" alt="Akihiro Project" width=400px></a>
    <br>
    <br>
 </p>
 
-[GeezProjects](https://github.com/vckyou/GeezProjects) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
+[AkihiroProject](https://github.com/akihiro69/AkihiroProject) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
 
 Berbasis [Paperplane](https://github.com/RaphielGang/Telegram-UserBot) Dan [ProjectBish](https://github.com/adekmaulana/ProjectBish)
 Untuk membuat repository ini saya menambahkan beberapa modul yang sangat di butuhkan dengan banyak pengguna sehingga ada beberapa perubahan module yang di modifikasi.
@@ -50,8 +50,8 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 ### Tutorial Deploy To VPS
 
--  `git clone https://github.com/vckyou/GeezProjects`
--  `cd GeezProjects`
+-  `git clone https://github.com/akihiro69/AkihiroProject`
+-  `cd AkihiroProject`
 -  `pip3 install -r requirements.txt`
 -  `mv sample_config.env config.env`
 -  edit config.env Anda dan isi VARS menggunakan `nano config.env` `CTRL + S ` untuk menyimpan VARS Anda, gunakan `CTRL + X` untuk keluar dan kembali ke direktori GeezProjects
@@ -72,12 +72,6 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
     
 </details>
 
-<h4>DEPLOY VIA BOT</h4>
-<a href="https://telegram.dog/XTZ_HerokuBot?start=dmNreW91L0dlZXpQcm9qZWN0cyBtYXN0ZXI">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="deploy">
-</a>
-
-
 <h4>DEPLOY VIA WEBSITE</h4>
 <a href="https://deploygeez.now.sh">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="deploy">
@@ -96,6 +90,7 @@ GeezProjects is licensed under [GNU Affero General Public License](https://www.g
 #### Thanks To [Everyone](https://github.com/vckyou/GeezProjects/graphs/contributors) Who Has Helped Make This Userbot Awesome!
 *   [AdekMaulana](https://github.com/adekmaulana) : ProjectBish
 *   [RaphielGang](https://github.com/RaphielGang) : Paperplane
+*   [Akihiro60](https://github.com/akihiro69/AkihiroProject) : AkihiroProject
 *   [TeamUltroid](https://github.com/TeamUltroid/Ultroid) :  UltroidUserbot
 *   [BianSepang](https://github.com/BianSepang/WeebProject) : WeebProject
 *   [Sandy1709](https://github.com/sandy1709/catuserbot) : CatUserbot
@@ -109,7 +104,7 @@ GeezProjects is licensed under [GNU Affero General Public License](https://www.g
 * [Lonami](https://github.com/LonamiWebs/) for [Telethon.](https://github.com/LonamiWebs/Telethon)
 * [MarshalX](https://github.com/MarshalX) for [PyTgCalls.](https://github.com/MarshalX/tgcalls)
 
-> Made with 💕 by [vckyaz](https://t.me/vckyaz).    
+> Made with 💕 by [akihiro69](https://t.me/akihiro69).    
 
 </details>
  

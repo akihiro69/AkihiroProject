@@ -42,8 +42,6 @@ AkihiroProject is licensed under [GNU Affero General Public License](https://www
 
 ---
 
-    </br><summary><b/>SPECIAL THANKS TO</b></summary><br/>
-
 #### Thanks To [Everyone](https://github.com/akihiro69/AkihiroProject/graphs/contributors) Who Has Helped Make This Userbot Awesome!
 *   [AdekMaulana](https://github.com/adekmaulana) : ProjectBish
 *   [RaphielGang](https://github.com/RaphielGang) : Paperplane

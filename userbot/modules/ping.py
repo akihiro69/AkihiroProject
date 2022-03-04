@@ -61,22 +61,26 @@ async def _(ping):
     await xx.edit("**Pinging..**")
     await xx.edit("**Pinging...**")
     await xx.edit("**Pinging....**")
+    await xx.edit("⚡")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await ping.client.get_me()
-    await xx.edit(f"**Akihiro UserBot!!🌋**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
+    await xx.edit(f"**Akihiro Project!** 🐞\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
 
 
-@geez_cmd(pattern=r"tping$")
+@geez_cmd(pattern=r"twing$")
 async def _(ping):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xping = await edit_or_reply(ping, "`Pinging....`")
+    twing = await edit_or_reply(ping, "`Pinging....`")
+    await twing.edit("**TWICE Ping!!!**")
+    await twing.edit("**Hana-Dul-Set**")
+    await twing.edit("**One In A Million...**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await xping.edit(
-        f"**TWICEE!! 🍭**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
+    await twing.edit(
+        f"**TWICEE IMNIDA!! 🍭**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
     )
 
 

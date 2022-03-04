@@ -23,7 +23,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(xx, ac_br, changelog):
     changelog_str = (
-        f"**❖ Tersedia Pembaruan Untuk [{ac_br}] :\n\n❖ Pembaruan:**\n`{changelog}`"
+        f"**☔ Tersedia Pembaruan Untuk [{ac_br}] :\n\n☔ Pembaruan:**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
         await edit_or_reply(xx, "**Changelog terlalu besar, dikirim sebagai file.**")
@@ -90,7 +90,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Build Gagal!** Dibatalkan karena ada beberapa code yang error.`"
             )
         await edit_or_reply(
-            xx, "`GeezProjects Berhasil Di Deploy! Userbot bisa di gunakan kembali.`"
+            xx, "`AkihiroProject Berhasil Di Deploy! Userbot bisa di gunakan kembali.`"
         )
 
     else:
@@ -105,7 +105,7 @@ async def update(xx, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await edit_or_reply(
-        xx, "`GeezProjects Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
+        xx, "`AkihiroProject Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
     )
 
     try:

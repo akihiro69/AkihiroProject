@@ -119,14 +119,14 @@ async def repo_is_here(event):
     xx = await edit_or_reply(event, "`Processing...`")
     await xx.edit(
         f"╭‒─‒──────────────\n"
-        f"│    __Thanks For Using Me__\n"
+        f"│    𝑻𝒉𝒂𝒏𝒌𝒔 𝒇𝒐𝒓 𝑼𝒔𝒊𝒏𝒈 𝑴𝒆\n"
         f"├‒─‒─────────────\n"
         f"│`Bot Ver    :` `{BOT_VER}@{branch}`\n"
-        f"│`Support    :` [Geez Support](t.me/AkihiroSupport)\n"
+        f"│`Support    :` [Akihiro Support](t.me/AkihiroSupport)\n"
         f"│`Channel    :` [Channel Support](t.me/AkihiroUpdate)\n"
         f"│`Owner Repo :` [agung☂̈́](t.me/akihiro69)\n"
         f"├‒─‒──────────────\n"
-        f"│`Repository :` [𝙂𝙚𝙚𝙯 𝙋𝙧𝙤𝙟𝙚𝙘𝙩𝙨](https://github.com/akihiro69/AkihiroUbot)\n"
+        f"│𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 : [𝘼𝙠𝙞𝙝𝙞𝙧𝙤 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://github.com/akihiro69/AkihiroUbot)\n"
         f"╰‒─‒─────────────\n"
         f"  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/akihiro69/AkihiroUbot/blob/master/LICENSE)"
     )

@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text=f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮\n\n•☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
+                    text= f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮 🤭\n\n☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -575,7 +575,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮\n\n☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞"
+                text = f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮 🤭\n\n☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞"
                 await event.edit(
                     text,
                     file=logogeez,
@@ -605,9 +605,9 @@ with bot:
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
-                openlagi = custom.Button.inline("𝐎𝐩𝐞𝐧 𝐀𝐠𝐚𝐢𝐧", data="reopen")
+                openlagi = custom.Button.inline("𝐎𝐩𝐞𝐧 𝐀𝐠𝐚𝐢𝐧 🥺", data="reopen")
                 await event.edit(
-                    "𝐇𝐞𝐥𝐩 𝐌𝐨𝐝𝐞 𝐁𝐮𝐭𝐭𝐨𝐧 𝐃𝐢𝐭𝐮𝐭𝐮𝐩!", buttons=openlagi
+                    "𝐇𝐞𝐥𝐩 𝐌𝐨𝐝𝐞 𝐁𝐮𝐭𝐭𝐨𝐧 𝐃𝐢𝐭𝐮𝐭𝐮𝐩 😭", buttons=openlagi
                 )
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"

@@ -171,7 +171,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
-        f"┃[⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡](https://github.com/vckyou/GeezProjects)\n"
+        f"┃[⚡A⃤ K⃤ I⃤ H⃤ I⃤ R⃤ O⃤⚡](https://github.com/akihiro69/AkihiroUbot)\n"
         f"╰═─────╼══⌘══╾─────═ \n"
         f" {alive_text} \n"
         f" ─────────────────── \n"
@@ -182,7 +182,7 @@ async def amireallyalive(alive):
         f" ❍ `Bot Ver   :` {BOT_VER} \n"
         f" ❍ `Modules   :` {len(modules)} Modules \n"
         f"╭═───────╼⌘╾───────═ \n"
-        f"┃[𝗚𝗿𝗼𝘂𝗽](https://t.me/{GROUP})  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{CHANNEL})  |  "
+        f"┃[𝗚𝗿𝗼𝘂𝗽](https://t.me/AkihiroSupport)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/AkihiroUpdate)  |  "
         f"[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})\n"
         f"╰═──────╼═⌘═╾───────═")
     if ALIVE_LOGO:

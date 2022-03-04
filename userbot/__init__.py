@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text= f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮 🤭\n\n☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞",
+                    text= f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮 🤭\n\n☔ 𝐏𝐞𝐦𝐢𝐥𝐢𝐤 [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -575,7 +575,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮 🤭\n\n☔ **𝐏𝐞𝐦𝐢𝐥𝐢𝐤** [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞"
+                text = f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮 🤭\n\n☔ 𝐏𝐞𝐦𝐢𝐥𝐢𝐤 [{user.first_name}](tg://user?id={user.id})\n☔ 𝐉𝐮𝐦𝐥𝐚𝐡 **{len(dugmeler)}** 𝐌𝐨𝐝𝐮𝐥𝐞"
                 await event.edit(
                     text,
                     file=logogeez,

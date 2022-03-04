@@ -171,7 +171,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
-        f"┃[⚡A⃤ K⃤ I⃤ H⃤ I⃤ R⃤ O⃤⚡](https://github.com/akihiro69/AkihiroUbot)\n"
+        f"┃[⚡A⃤ K⃤ I⃤ H⃤ I⃤ R⃤ O⃤⚡](https://github.com/akihiro69/AkihiroProject)\n"
         f"╰═─────╼══⌘══╾─────═ \n"
         f" {alive_text} \n"
         f" ─────────────────── \n"

@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text=f"**🚫 AkihiroUserbot Inline Menu 🚫**\n\n•  **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"𝐀𝐤𝐢𝐡𝐢𝐫𝐨𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐧𝐥𝐢𝐧𝐞 𝐌𝐞𝐧𝐮\n\n•  **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -506,12 +506,12 @@ with bot:
                     description="Repository Akihiro Ubot",
                     url="https://t.me/AkihiroSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**Akihiro Ubot**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [Akihiro69](https://t.me/akihiro69bot)\n**Support :** @AkihiroSupport\n❍▸ **Repository :** [Akihiro UserBot](https://github.com/akihiro69/AkihiroUbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Akihiro Project**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [Akihiro69](https://t.me/akihiro69bot)\n**Support :** @AkihiroSupport\n❍▸ **Repository :** [Akihiro Project](https://github.com/akihiro69/AkihiroProject)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/AkihiroSupport"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/akihiro69/AkihiroUbot"
+                                "ʀᴇᴘᴏ", "https://github.com/akihiro69/AkihiroProject"
                             ),
                         ],
                     ],
@@ -560,7 +560,7 @@ with bot:
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/AkihiroSupport"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/akihiro69/AkihiroUbot"
+                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/akihiro69/AkihiroProject"
                              ),
                         ],
                     ],
@@ -605,9 +605,9 @@ with bot:
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
-                openlagi = custom.Button.inline("• Re-Open Menu •", data="reopen")
+                openlagi = custom.Button.inline("𝐎𝐩𝐞𝐧 𝐀𝐠𝐚𝐢𝐧", data="reopen")
                 await event.edit(
-                    "❌ **Help Mode Button Ditutup!** ❌", buttons=openlagi
+                    "𝐇𝐞𝐥𝐩 𝐌𝐨𝐝𝐞 𝐁𝐮𝐭𝐭𝐨𝐧 𝐃𝐢𝐭𝐮𝐭𝐮𝐩!", buttons=openlagi
                 )
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"

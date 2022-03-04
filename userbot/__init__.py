@@ -492,7 +492,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@GeezSupport"):
+            if event.query.user_id == uid and query.startswith("@AkihiroSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logogeez,
@@ -509,9 +509,9 @@ with bot:
                     text="**Akihiro Ubot**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [Akihiro69](https://t.me/akihiro69bot)\n**Support :** @AkihiroSupport\n❍▸ **Repository :** [Akihiro UserBot](https://github.com/akihiro69/AkihiroUbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/GeezSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/AkihiroSupport"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/vckyou/GeezProjects"
+                                "ʀᴇᴘᴏ", "https://github.com/akihiro69/AkihiroUbot"
                             ),
                         ],
                     ],
@@ -558,9 +558,9 @@ with bot:
                     text=f"**AkihiroUserBot**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @GeezProject\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/GeezSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/AkihiroSupport"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/vckyou/GeezProjects"
+                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/akihiro69/AkihiroUbot"
                              ),
                         ],
                     ],

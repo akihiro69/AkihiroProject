@@ -203,7 +203,7 @@ async def ban(bon):
     else:
         await edit_or_reply(
             bon,
-            f"\\\\**#Banned_User**//\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n**User ID:** `{user.id}`\n**Action:** `Banned User by {owner}`",
+            f"**#Banned_User**\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n**User ID:** `{user.id}`\n**Action:** `Banned User by {owner}`",
         )
 
 
@@ -251,7 +251,7 @@ async def spider(spdr):
         return await edit_or_reply(spdr, "**Gagal Membisukan, Dia Adalah Pembuat Saya 🤪**")
     await edit_or_reply(
         spdr,
-        r"\\**#Muted_User**//"
+        r"**#Muted_User**"
         f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
         f"**User ID:** `{user.id}`\n"
         f"**Action:** `Mute by {owner}`",
@@ -263,7 +263,7 @@ async def spider(spdr):
         if reason:
             await edit_or_reply(
                 spdr,
-                r"\\**#DMute_User**//"
+                r"**#DMuted_User**"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
                 f"**Reason:** `{reason}`",
@@ -271,7 +271,7 @@ async def spider(spdr):
         else:
             await edit_or_reply(
                 spdr,
-                r"\\**#DMute_User**//"
+                r"**#DMute_User**"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
                 f"**Action:** `DMute by {owner}`",
@@ -391,7 +391,7 @@ async def gspider(gspdr):
     elif reason:
         await edit_or_reply(
             gspdr,
-            r"\\**#GMuted_User**//"
+            r"**#GMuted_User**"
             f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**User ID:** `{user.id}`\n"
             f"**Reason:** `{reason}`",
@@ -399,7 +399,7 @@ async def gspider(gspdr):
     else:
         await edit_or_reply(
             gspdr,
-            r"\\**#GMuted_User**//"
+            r"**#GMuted_User**"
             f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**User ID:** `{user.id}`\n"
             f"**Action:** `Global Muted by {owner}`",

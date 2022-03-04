@@ -2,7 +2,7 @@
   "name": "Akihiro Userbot",
   "description": "[AkihiroUserbot] userbot Telegram modular yang berjalan pada Python 3.9+",
   "logo": "https://telegra.ph/file/02b3dbeb4df30582f0d66.jp",
-  "keywords": ["telegram", "userbot", "geezprojects", "modular", "python"],
+  "keywords": ["telegram", "userbot", "akihiroubot", "modular", "python"],
   "repository": "https://github.com/akihiro69/AkihiroUbot",
   "stack": "container",
   "env": {

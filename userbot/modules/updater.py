@@ -59,7 +59,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
             await edit_or_reply(
                 xx,
                 f"{txt}\n"
-                "**Kredensial Heroku tidak valid untuk deploy GeezProjects dyno.**",
+                "**Kredensial Heroku tidak valid untuk deploy AkihiroProject dyno.**",
             )
             return repo.__del__()
         try:
@@ -163,7 +163,7 @@ async def upstream(event):
 
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if conf == "deploy":
-        await xx.edit("`[HEROKU]: Update Deploy GeezProjects Sedang Dalam Proses...`")
+        await xx.edit("`[HEROKU]: Update Deploy AkihiroProject Sedang Dalam Proses...`")
         await deploy(xx, repo, ups_rem, ac_br, txt)
         return
 
@@ -202,9 +202,9 @@ CMD_HELP.update(
     {
         "update": f"**Plugin : **`update`\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}update`\
-        \n  ↳ : **Untuk Melihat Pembaruan Terbaru GeezProjects.\
+        \n  ↳ : **Untuk Melihat Pembaruan Terbaru AkihiroProject.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}update deploy`\
-        \n  ↳ : **Untuk MengUpdate Fitur Terbaru Dari GeezProjects.\
+        \n  ↳ : **Untuk MengUpdate Fitur Terbaru Dari AkihiroProject.\
     "
     }
 )

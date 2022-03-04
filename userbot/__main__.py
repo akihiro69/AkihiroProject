@@ -45,7 +45,7 @@ LOGS.info(
     f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/GeezSupport"
 )
 
-LOGS.info(f"💢 Geez - Projects Berhasil Diaktfikan 💢",
+LOGS.info(f"💢 Akihiro - UserBot Berhasil Diaktfikan 💢",
             )
 
 async def geez_userbot_on():
@@ -53,7 +53,7 @@ async def geez_userbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"💢 Geez - Projects Berhasil Diaktfikan 💢\n╼┅━━━━━╍━━━━━┅╾\n❍▹ `Bot Of :` [{user.first_name}](tg://user?id={user.id})\n❍▹ `BotVer :` {BOT_VER}@{branch}\n╼┅━━━━━╍━━━━━┅╾",
+                f"💢 Akihiro - UserBot Berhasil Diaktfikan 💢\n╼┅━━━━━╍━━━━━┅╾\n❍▹ `Bot Of :` [{user.first_name}](tg://user?id={user.id})\n❍▹ `BotVer :` {BOT_VER}@{branch}\n╼┅━━━━━╍━━━━━┅╾",
             )
     except Exception as e:
         LOGS.info(str(e))

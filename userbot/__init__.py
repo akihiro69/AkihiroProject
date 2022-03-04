@@ -224,11 +224,11 @@ INLINE_PIC = (
 
 # Picture For VCPLUGIN
 PLAY_PIC = (
-    os.environ.get("PLAY_PIC") or "https://telegra.ph/file/bcb83aaf377737de971d9.png"
+    os.environ.get("PLAY_PIC") or "https://telegra.ph/file/c6ba745c5404609188667.png"
 )
 
 QUEUE_PIC = (
-    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/bcb83aaf377737de971d9.png"
+    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/c6ba745c5404609188667.png"
 )
 
 
@@ -551,7 +551,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="⚡ AkihiroUserBot ⚡",
+                    title="⚡ AkihiroUserbot ⚡",
                     description="Akihiro Ubot | Telethon",
                     url="https://t.me/AkihiroSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),

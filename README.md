@@ -13,12 +13,6 @@
 [![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/vckyou/GeezProjects/blob/main/LICENSE)   
 ----
 
-<p align="center">
-   <a href="https://github.com/akihiro69/AkihiroProject"><img src="https://telegra.ph/file/8e256cb133087b060e288.png" alt="Geez Projects" width=400px></a>
-   <br>
-   <br>
-</p>
-
 [AkihiroProject](https://github.com/akihiro69/AkihiroProject) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
 
 Berbasis [Paperplane](https://github.com/RaphielGang/Telegram-UserBot) Dan [ProjectBish](https://github.com/adekmaulana/ProjectBish)

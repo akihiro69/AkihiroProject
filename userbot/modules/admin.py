@@ -142,12 +142,12 @@ async def promote(event):
         rank = "admin"
     if not user:
         return
-    eventman = await edit_or_reply(event, "`Promoting...`")
+    eventman = await edit_or_reply(event, "`Menaikkan jabatan...`")
     try:
         await event.client(EditAdminRequest(event.chat_id, user.id, new_rights, rank))
     except BadRequestError:
         return await eventman.edit(NO_PERM)
-    await edit_delete(eventman, "`Promoted Successfully!`", 30)
+    await edit_delete(eventman, "`Jabatan Sukses dinaikkan`", 30)
 
 
 @geez_cmd(pattern="demote(?:\s|$)([\s\S]*)")
@@ -157,7 +157,7 @@ async def demote(event):
     user, _ = await get_user_from_event(event)
     if not user:
         return
-    eventman = await edit_or_reply(event, "`Demoting...`")
+    eventman = await edit_or_reply(event, "`Menurunkan Jabatan...`")
     newrights = ChatAdminRights(
         add_admins=None,
         invite_users=None,
@@ -172,7 +172,7 @@ async def demote(event):
         await event.client(EditAdminRequest(event.chat_id, user.id, newrights, rank))
     except BadRequestError:
         return await eventman.edit(NO_PERM)
-    await edit_delete(eventman, "`Demoted Successfully!`", 30)
+    await edit_delete(eventman, "`Jabatan Sukses diturunkan`", 30)
 
 
 @geez_cmd(pattern="ban(?:\s|$)([\s\S]*)")
@@ -187,7 +187,7 @@ async def ban(bon):
     user, reason = await get_user_from_event(bon)
     if not user:
         return
-    await edit_or_reply(bon, "`Processing Banned...`")
+    await edit_or_reply(bon, "`Memproses Blokir dari Grup...`")
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
@@ -215,14 +215,14 @@ async def nothanos(unbon):
     creator = chat.creator
     if not admin and not creator:
         return await edit_delete(unbon, NO_ADMIN)
-    await edit_or_reply(unbon, "`Processing...`")
+    await edit_or_reply(unbon, "`Memproses...`")
     user = await get_user_from_event(unbon)
     user = user[0]
     if not user:
         return
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await edit_delete(unbon, "`Unban Berhasil Dilakukan!`")
+        await edit_delete(unbon, "`Melepas Blokir Grup Berhasil Dilakukan!`")
     except UserIdInvalidError:
         await edit_delete(unbon, "`Sepertinya Terjadi ERROR!`")
 
@@ -248,7 +248,7 @@ async def spider(spdr):
             spdr, "**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**"
         )
     if user.id in DEVS:
-        return await edit_or_reply(spdr, "**Gagal Mute, Dia Adalah Pembuat Saya 🤪**")
+        return await edit_or_reply(spdr, "**Gagal Membisukan, Dia Adalah Pembuat Saya 🤪**")
     await edit_or_reply(
         spdr,
         r"\\**#Muted_User**//"
@@ -292,7 +292,7 @@ async def unmoot(unmot):
         from userbot.modules.sql_helper.spam_mute_sql import unmute
     except AttributeError:
         return await unmot.edit(NO_SQL)
-    await edit_or_reply(unmot, "`Processing...`")
+    await edit_or_reply(unmot, "`Memproses...`")
     user = await get_user_from_event(unmot)
     user = user[0]
     if not user:
@@ -302,7 +302,7 @@ async def unmoot(unmot):
         return await edit_delete(unmot, "**ERROR! Pengguna Sudah Tidak Dibisukan.**")
     try:
         await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
-        await edit_delete(unmot, "**Berhasil Melakukan Unmute!**")
+        await edit_delete(unmot, "**Berhasil Membatalkan Bisu!**")
     except UserIdInvalidError:
         return await edit_delete(unmot, "**Terjadi ERROR!**")
 
@@ -354,9 +354,9 @@ async def ungmoot(un_gmute):
     user = user[0]
     if not user:
         return
-    await edit_or_reply(un_gmute, "`Membuka Global Mute Pengguna...`")
+    await edit_or_reply(un_gmute, "`Membuka Global Bisu Pengguna...`")
     if ungmute(user.id) is False:
-        await un_gmute.edit("**ERROR!** Pengguna Sedang Tidak Di Gmute.")
+        await un_gmute.edit("**ERROR!** Pengguna Sedang Tidak Di Global Bisu.")
     else:
         await edit_delete(un_gmute, "**Berhasil! Pengguna Sudah Tidak Dibisukan**")
 
@@ -496,7 +496,7 @@ async def pin(event):
         return await edit_delete(event, NO_PERM, 5)
     except Exception as e:
         return await edit_delete(event, f"`{e}`", 5)
-    await edit_delete(event, "`Pinned Successfully!`")
+    await edit_delete(event, "`Sematkan Pesan Sukses!`")
 
 
 @geez_cmd(pattern="unpin( all|$)")
@@ -525,7 +525,7 @@ async def pin(event):
         return await edit_delete(event, NO_PERM, 5)
     except Exception as e:
         return await edit_delete(event, f"`{e}`", 5)
-    await edit_delete(event, "`Unpinned Successfully!`")
+    await edit_delete(event, "`Melepas Sematan Sukses`")
 
 
 @geez_cmd(pattern="kick(?: |$)(.*)")
@@ -539,7 +539,7 @@ async def kick(usr):
     user, reason = await get_user_from_event(usr)
     if not user:
         return await edit_delete(usr, "**Tidak Dapat Menemukan Pengguna.**")
-    xxnx = await edit_or_reply(usr, "`Processing...`")
+    xxnx = await edit_or_reply(usr, "`Memproses...`")
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
         await sleep(0.5)
@@ -557,7 +557,7 @@ async def kick(usr):
 
 @geez_cmd(pattern=r"undlt( -u)?(?: |$)(\d*)?")
 async def _iundlt(event):
-    catevent = await edit_or_reply(event, "`Searching recent actions...`")
+    catevent = await edit_or_reply(event, "`Mencari Aksi Terbaru...`")
     flag = event.pattern_match.group(1)
     if event.pattern_match.group(2) != "":
         lim = int(event.pattern_match.group(2))

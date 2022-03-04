@@ -67,7 +67,7 @@ async def _(ping):
     await xx.edit(f"**Akihiro UserBot!!🌋**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
 
 
-@geez_cmd(pattern=r"xping$")
+@geez_cmd(pattern=r"tping$")
 async def _(ping):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -76,7 +76,7 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xping.edit(
-        f"**PONG!! 🍭**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
+        f"**TWICEE!! 🍭**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
     )
 
 
@@ -187,7 +187,7 @@ async def geez(ganteng):
 CMD_HELP.update(
     {
         "ping": f"**Plugin : **`ping`\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}ping` ; `{cmd}xping` ; `{cmd}kping`\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}ping` ; `{cmd}tping` ; `{cmd}kping`\
         \n  ❍▸ : **Untuk menunjukkan ping userbot.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}pong`\
         \n  ❍▸ : **Sama seperti perintah ping\

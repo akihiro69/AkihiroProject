@@ -72,8 +72,8 @@ async def _(ping):
                   f" **Akihiro Project** \n"
                   f" **Pinger :** `%sms` \n"
                   f" **Uptime :** `{uptime}`🕛"
-                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n" % (duration)
-      )
+                  f" **Owner :** [{user.first_name}](tg://user?id={user_id}) \n" % (duration)
+     )
 
 
 @geez_cmd(pattern=r"twing$")

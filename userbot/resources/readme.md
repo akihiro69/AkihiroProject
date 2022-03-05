@@ -1,2 +1,2 @@
 # Extra Resources for GeezProjects
-Repository [GeezProjects](https://github.com/vckyou/GeezProjects)
+Repository [AkihiroProject](https://github.com/akihiro69/AkihiroProject)

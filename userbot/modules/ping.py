@@ -68,7 +68,7 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     await ping.client.get_me()
     await xx.edit(
-                  f" **PONG!!☔**` \n"
+                  f" **PONG!!☔** \n"
                   f" **Akihiro Project** \n"
                   f" **Pinger :** `%sms` \n"
                   f" **Uptime :** `{uptime}`🕛 \n" 

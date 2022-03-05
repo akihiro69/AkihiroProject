@@ -68,10 +68,10 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     await ping.client.get_me()
     await xx.edit(
-                  f" **PONG!!☔**`\n"
-                  f" **Akihiro Project**\n"
-                  f" **Owner :** [{user.first_name}](tg://user?id={user.id})"
-                  f" **Pinger :** `%sms`\n"
+                  f" **PONG!!☔**` \n"
+                  f" **Akihiro Project** \n"
+                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n"
+                  f" **Pinger :** `%sms` \n"
                   f" **Uptime :** `{uptime}`🕛" % (duration))
 
 
@@ -96,8 +96,8 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await twing.edit(
-                     f" **TWICEE IMNIDA!!🍭**\n"
-                     f" **Twinger :** `%sms`\n"
+                     f" **TWICEE IMNIDA!!🍭** \n"
+                     f" **Twinger :** `%sms` \n"
                      f" **Uptime :** `{uptime}`🕛" % (duration)
     )
 

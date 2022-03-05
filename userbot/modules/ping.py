@@ -67,7 +67,12 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await ping.client.get_me()
-    await xx.edit(f"**Akihiro Project!** 🐞\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
+    await xx.edit(
+                  f" **PONG!!☔**`\n"
+                  f" **Akihiro Project**\n"
+                  f" **Owner :** [{user.first_name}](tg://user?id={user.id})"
+                  f" **Pinger :** `%sms`\n"
+                  f" **Uptime :** `{uptime}`🕛" % (duration))
 
 
 @geez_cmd(pattern=r"twing$")
@@ -91,7 +96,9 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await twing.edit(
-        f"**TWICEE IMNIDA!! 🍭**\n**Twinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
+                     f" **TWICEE IMNIDA!!🍭**\n"
+                     f" **Twinger :** `%sms`\n"
+                     f" **Uptime :** `{uptime}`🕛" % (duration)
     )
 
 
@@ -202,7 +209,7 @@ async def geez(ganteng):
 CMD_HELP.update(
     {
         "ping": f"**Plugin : **`ping`\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}ping` ; `{cmd}tping` ; `{cmd}kping`\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}ping` ; `{cmd}twing` ; `{cmd}kping`\
         \n  ❍▸ : **Untuk menunjukkan ping userbot.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}pong`\
         \n  ❍▸ : **Sama seperti perintah ping\

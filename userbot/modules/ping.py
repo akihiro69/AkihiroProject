@@ -71,7 +71,7 @@ async def _(ping):
                   f" **PONG!!☔**` \n"
                   f" **Akihiro Project** \n"
                   f" **Pinger :** `%sms` \n"
-                  f" **Uptime :** `{uptime}`🕛"
+                  f" **Uptime :** `{uptime}`🕛 \n" 
                   f" **Owner :** [{user.first_name}](tg://user?id={user_id}) \n" % (duration)
      )
 

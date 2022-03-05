@@ -70,9 +70,10 @@ async def _(ping):
     await xx.edit(
                   f" **PONG!!☔**` \n"
                   f" **Akihiro Project** \n"
-                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n"
                   f" **Pinger :** `%sms` \n"
-                  f" **Uptime :** `{uptime}`🕛" % (duration))
+                  f" **Uptime :** `{uptime}`🕛"
+                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n" % (duration)
+      )
 
 
 @geez_cmd(pattern=r"twing$")

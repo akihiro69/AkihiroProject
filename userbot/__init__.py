@@ -183,7 +183,7 @@ ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # untuk perintah teks costum .alive
-ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", "Hey, I Am Userbot.")
+ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", "Hey, I Am Akihiro Userbot.")
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", "Akihiro")
@@ -192,7 +192,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", "Akihiro")
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "⚡️")
 
 # Custom Emoji Alive
-INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "🍭")
+INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "☤")
 
 # Custom icon HELP
 ICON_HELP = os.environ.get("ICON_HELP", "ꖒ")
@@ -215,11 +215,11 @@ BOT_VER = os.environ.get("BOT_VER", "2.0.1")
 
 # Default .alive logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/5ed897c7b0c9e84d65327.png"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/602ca6ef6953a5094f3e4.jpg"
 )
 
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/5ed897c7b0c9e84d65327.png"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/602ca6ef6953a5094f3e4.jpg"
 )
 
 # Picture For VCPLUGIN

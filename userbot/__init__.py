@@ -211,15 +211,15 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot version
-BOT_VER = os.environ.get("BOT_VER", "1.0.5")
+BOT_VER = os.environ.get("BOT_VER", "2.0.1")
 
 # Default .alive logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/8299c9db53a1393c81d0d.jpg"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/5ed897c7b0c9e84d65327.png"
 )
 
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/8299c9db53a1393c81d0d.jpg"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/5ed897c7b0c9e84d65327.png"
 )
 
 # Picture For VCPLUGIN

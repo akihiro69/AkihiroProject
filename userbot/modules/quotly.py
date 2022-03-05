@@ -21,7 +21,7 @@ async def quott_(event):
     match = event.pattern_match.group(1).strip()
     if not event.is_reply:
         return await edit_delete(event, "`Reply Kepesan!`")
-    msg = await edit_or_reply(event, "Sedang Memprosess!!")
+    msg = await edit_or_reply(event, "`Sedang Memprosess!!`")
     reply = await event.get_reply_message()
     replied_to, reply_ = None, None
     if match:
@@ -71,7 +71,7 @@ async def quott_(event):
         file = await create_quotly(reply_, bg=match, reply=replied_to, sender=user)
     except Exception as er:
         return await msg.edit(str(er))
-    message = await reply.reply("Quotly by GeezProjects", file=file)
+    message = await reply.reply("Quotly by AkihiroProject", file=file)
     os.remove(file)
     await msg.delete()
     return message

@@ -163,7 +163,7 @@ async def gablist(event):
                 allow_cache=False,
             )
     else:
-        GBANNED_LIST = "Belum ada Pengguna yang Di-GlobalBlokir"
+        GBANNED_LIST = "`Belum ada Pengguna yang Di-GlobalBlokir`"
     await edit_or_reply(event, GBANNED_LIST)
 
 

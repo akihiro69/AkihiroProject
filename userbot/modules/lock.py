@@ -34,9 +34,9 @@ async def locks(event):
     elif input_str == "media":
         media = True
         what = "Media"
-    elif input_str == "sticker":
+    elif input_str == "stiker":
         sticker = True
-        what = "Sticker"
+        what = "Stiker"
     elif input_str == "gif":
         gif = True
         what = "GIF"
@@ -125,9 +125,9 @@ async def rem_locks(event):
     elif input_str == "media":
         media = False
         what = "Media"
-    elif input_str == "sticker":
+    elif input_str == "stiker":
         sticker = False
-        what = "Sticker"
+        what = "Stiker"
     elif input_str == "gif":
         gif = False
         what = "GIF"

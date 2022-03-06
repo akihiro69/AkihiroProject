@@ -62,17 +62,17 @@ async def _(ping):
     await xx.edit("**Pinging..**")
     await xx.edit("**Pinging...**")
     await xx.edit("**Pinging....**")
-    await xx.edit("⚡")
+    await xx.edit("🥵")
     await asyncio.sleep(3)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
     await xx.edit(
-                  f" **PONG!!☔** \n"
-                  f" **Akihiro Project** \n"
+                  f" **PONG!!🏓** \n"
+                  f" **AkihiroUserbot!🈴** \n"
+                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n"
                   f" **Pinger :** `%sms` \n"
-                  f" **Uptime :** `{uptime}`🕛 \n" 
-                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n" % (duration)
+                  f" **Uptime :** `{uptime}` \n" % (duration)
      )
 
 
@@ -90,7 +90,7 @@ async def _(ping):
     await asyncio.sleep(1)
     await twing.edit("**Set...**")
     await asyncio.sleep(1)
-    await twing.edit("✨")
+    await twing.edit("🥳")
     await asyncio.sleep(3)
     await twing.edit("**One In A Million...**")
     await asyncio.sleep(2)
@@ -99,7 +99,7 @@ async def _(ping):
     await twing.edit(
                      f" **TWICEE IMNIDA!!🍭** \n"
                      f" **Twinger :** `%sms` \n"
-                     f" **Uptime :** `{uptime}`🕛" % (duration)
+                     f" **Uptime :** `{uptime}` \n" % (duration)
     )
 
 

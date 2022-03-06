@@ -276,7 +276,7 @@ CMD_HELP.update(
     {
         "heroku": f"**Plugin : **`heroku`\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}set var <nama var> <value>`\
-        \n  ❍▸ : **Tambahkan Variabel Baru Atau Memperbarui Variabel Setelah Menyetel Variabel GeezProjects Akan Di Restart.\
+        \n  ❍▸ : **Tambahkan Variabel Baru Atau Memperbarui Variabel Setelah Menyetel Variabel AkihiroUserbot Akan Di Restart.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}get var or .get var <nama var>`\
         \n  ❍▸ : **Dapatkan Variabel Yang Ada,Harap Gunakan Di Grup Private Anda!\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}del var <nama var>`\

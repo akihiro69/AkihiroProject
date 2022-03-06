@@ -39,16 +39,16 @@ def mentionuser(name, userid):
 async def gban(event):
     if event.fwd_from:
         return
-    gbun = await edit_or_reply(event, "`Processing Gbanning...`")
+    gbun = await edit_or_reply(event, "`Memproses Global Blokir...`")
     start = datetime.now()
     user, reason = await get_user_from_event(event, gbun)
     if not user:
         return
     if user.id == (await event.client.get_me()).id:
-        await gbun.edit("**Terjadi Kesalahan, Harap Balas Kepesanan Untuk melakukan Gbanning**")
+        await gbun.edit("**Terjadi Kesalahan, Harap Balas Kepesan Untuk melakukan Global Blokir**")
         return
     if user.id in DEVS:
-        await gbun.edit("**Gagal Melakukan Global Banning Karna Dia Adalah Pembuat Saya**")
+        await gbun.edit("**Gagal Melakukan Global Blokir, Karna Dia Adalah Pembuat Saya**")
         return
     if gban_sql.is_gbanned(user.id):
         await gbun.edit(
@@ -61,10 +61,10 @@ async def gban(event):
     count = 0
     fiz = len(san)
     if fiz == 0:
-        await gbun.edit("**maaf Anda Tidak Mempunyai Hak Admin Di Group Ini**")
+        await gbun.edit("**Maaf Anda Tidak Mempunyai Hak Admin Di Group Ini**")
         return
     await gbun.edit(
-        f"**initiating gban of the** [{user.first_name}](tg://user?id={user.id}) **in** `{len(san)}` **groups**"
+        f"**Memulai Global Blokir dari** [{user.first_name}](tg://user?id={user.id}) **dalam** `{len(san)}` **Grup**"
     )
     for i in range(fiz):
         try:
@@ -74,17 +74,17 @@ async def gban(event):
         except BadRequestError:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                f"**Anda tidak memiliki izin Banned di :**\n**Group Chat :** `{event.chat_id}`",
+                f"**Anda tidak memiliki izin Blokir di :**\n**Grup :** `{event.chat_id}`",
             )
     end = datetime.now()
     timetaken = (end - start).seconds
     if reason:
         await gbun.edit(
-            f"**GBanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Reason :** `{reason}`"
+            f"**Global Blokir** [{user.first_name}](tg://user?id={user.id}) **di** `{count}` **Grup, dalam waktu** `{timetaken}` **detik**!!\n**Alasan :** `{reason}`"
         )
     else:
         await gbun.edit(
-            f"**GBanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Added to gbanlist.**"
+            f"**Global Blokir** [{user.first_name}](tg://user?id={user.id}) **di** `{count}` **Grup, dalam waktu** `{timetaken}` **detik**!!\n**Ditambahkan ke Daftar Global Blokir.**"
         )
 
 
@@ -93,7 +93,7 @@ async def gban(event):
 async def ungban(event):
     if event.fwd_from:
         return
-    ungbun = await edit_or_reply(event, "`UnGbanning...`")
+    ungbun = await edit_or_reply(event, "`Melepas Global Blokir...`")
     start = datetime.now()
     user, reason = await get_user_from_event(event, ungbun)
     if not user:
@@ -102,7 +102,7 @@ async def ungban(event):
         gban_sql.freakungban(user.id)
     else:
         await ungbun.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Tidak Berada Di Daftar GBan List!!!**"
+            f"[{user.first_name}](tg://user?id={user.id}) **Tidak Berada Di Daftar Global Blokir!!!**"
         )
         return
     san = []
@@ -113,7 +113,7 @@ async def ungban(event):
         await ungbun.edit("**Terjadi Kesalahan Karna Anda Bukan lah admin.**")
         return
     await ungbun.edit(
-        f"**initiating ungban of the** [{user.first_name}](tg://user?id={user.id}) **in** `{len(san)}` **groups**"
+        f"**Memulai Lepas Blokir dari** [{user.first_name}](tg://user?id={user.id}) **dalam** `{len(san)}` **Grup**"
     )
     for i in range(fiz):
         try:
@@ -123,17 +123,17 @@ async def ungban(event):
         except BadRequestError:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                f"**Anda tidak memiliki izin Banned di :**\n**Group Chat :** `{event.chat_id}`",
+                f"**Anda tidak memiliki izin Blokir di :**\n**Grup :** `{event.chat_id}`",
             )
     end = datetime.now()
     timetaken = (end - start).seconds
     if reason:
         await ungbun.edit(
-            f"**UngBanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Reason :** `{reason}`"
+            f"**Melepas Global Blokir** [{user.first_name}](tg://user?id={user.id}) **di** `{count}` **Grup dalam waktu** `{timetaken}` **detik**!!\n**Alasan :** `{reason}`"
         )
     else:
         await ungbun.edit(
-            f"**UngBanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Removed from gbanlist**"
+            f"**Melepas Global Blokir** [{user.first_name}](tg://user?id={user.id}) **di** `{count}` **Grup dalam waktu** `{timetaken}` **detik**!!\n**Dihapus dari Daftar Global Blokir**"
         )
 
 
@@ -142,14 +142,14 @@ async def gablist(event):
     if event.fwd_from:
         return
     gbanned_users = gban_sql.get_all_gbanned()
-    GBANNED_LIST = "**List Global Banned Anda Saat Ini**\n"
+    GBANNED_LIST = "**Daftar Global Blokir Anda Saat Ini**\n"
     if len(gbanned_users) > 0:
         for a_user in gbanned_users:
             if a_user.reason:
-                GBANNED_LIST += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) **Reason** `{a_user.reason}`\n"
+                GBANNED_LIST += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) **Alasan** `{a_user.reason}`\n"
             else:
                 GBANNED_LIST += (
-                    f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) `No Reason`\n"
+                    f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) `Tanpa Alasan`\n"
                 )
     if len(gbanned_users) >= 4096:
         with BytesIO(str.encode(GBANNED_LIST)) as fileuser:
@@ -159,11 +159,11 @@ async def gablist(event):
                 fileuser,
                 force_document=True,
                 thumb="userbot/resources/logo.jpg",
-                caption="**List Global Banned**",
+                caption="**Daftar Global Blokir**",
                 allow_cache=False,
             )
     else:
-        GBANNED_LIST = "Belum ada Pengguna yang Di-Gban"
+        GBANNED_LIST = "Belum ada Pengguna yang Di-GlobalBlokir"
     await edit_or_reply(event, GBANNED_LIST)
 
 
@@ -180,7 +180,7 @@ async def _(event):
                     view_messages=False,
                 )
                 await event.reply(
-                    f"**#GBanned_User** Joined.\n\n** • First Name:** [{user.first_name}](tg://user?id={user.id})\n • **Action:** `Banned`"
+                    f"**Global Blokir Pengguna** Bergabung.\n\n** • Akun:** [{user.first_name}](tg://user?id={user.id})\n • **Aksi:** `Blokir`"
                 )
             except BaseException:
                 pass

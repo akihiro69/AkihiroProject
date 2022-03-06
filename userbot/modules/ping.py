@@ -66,7 +66,7 @@ async def _(ping):
     await asyncio.sleep(3)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await ping.client.get_me()
+    user = await ping.client.get_me()
     await xx.edit(
                   f" **PONG!!☔** \n"
                   f" **Akihiro Project** \n"

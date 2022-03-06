@@ -68,11 +68,11 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
     await xx.edit(
-                  f" **PONG!!🏓** \n"
-                  f" **AkihiroUserbot!🈴** \n"
-                  f" **Owner :** [{user.first_name}](tg://user?id={user.id}) \n"
-                  f" **Pinger :** `%sms` \n"
-                  f" **Uptime :** `{uptime}` \n" % (duration)
+                  f" `PONG!!`🏓 \n"
+                  f" **akihirouserbot!🈴** \n"
+                  f"** • Owner :** [{user.first_name}](tg://user?id={user.id}) \n"
+                  f"** • Pinger :** `%sms` \n"
+                  f"** • Uptime :** `{uptime}` \n" % (duration)
      )
 
 
@@ -96,10 +96,12 @@ async def _(ping):
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
+    user = await twing.client.get_me()
     await twing.edit(
-                     f" **TWICEE IMNIDA!!🍭** \n"
-                     f" **Twinger :** `%sms` \n"
-                     f" **Uptime :** `{uptime}` \n" % (duration)
+                     f" `TWICEE IMNIDA!!`🍭 \n"
+                     f"** • Twinger :** `%sms` \n"
+                     f"** • Uptime :** `{uptime}` \n"
+                     f"** • ONCE :** [{user.first_name}](tg://user?id={user.id}) % (duration)
     )
 
 

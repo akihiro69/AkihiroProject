@@ -25,10 +25,10 @@ async def sudo(event):
     if sudo == "True":
         await edit_or_reply(
             event,
-            f"⛑️ **Sudo :** `Enabled`\n\n🗃️ ** Daftar List Sudo :**\n» `{users}`\n\n**SUDO_HANDLER:** `{SUDO_HANDLER}`",
+            f"⛑️ **Sudo :** `Aktif`\n\n🗃️ ** Daftar Sudo :**\n» `{users}`\n\n**SUDO_HANDLER:** `{SUDO_HANDLER}`",
         )
     else:
-        await edit_delete(event, "⛑️ **Sudo :** `Disabled`")
+        await edit_delete(event, "⛑️ **Sudo :** `Mati`")
 
 
 @geez_cmd(pattern="addsudo(?:\s|$)([\s\S]*)")
@@ -56,7 +56,7 @@ async def add(event):
     else:
         await edit_delete(
             xxnx,
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan pengguna sudo**",
+            "**Silahkan Tambahkan ID Pengguna Sudo divar** `SUDO_USERS` **untuk menambahkan pengguna sudo**",
         )
         return
     heroku_Config = app.config()
@@ -80,7 +80,7 @@ async def _(event):
     if event.sender_id in SUDO_USERS:
         return
     suu = event.text[8:]
-    xxx = await edit_or_reply(event, "`Processing...`")
+    xxx = await edit_or_reply(event, "`Memproses...`")
     reply = await event.get_reply_message()
     if not suu and not reply:
         return await edit_delete(
@@ -97,7 +97,7 @@ async def _(event):
     else:
         await edit_delete(
             xxx,
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menghapus pengguna sudo**",
+            "**Silahkan Hapus ID Pengguna Sudo divar** `SUDO_USERS` **untuk menghapus pengguna sudo**",
         )
         return
     heroku_Config = app.config()

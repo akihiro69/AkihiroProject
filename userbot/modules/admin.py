@@ -195,15 +195,15 @@ async def ban(bon):
     if reason:
         await edit_or_reply(
             bon,
-            r"\\**#Banned_User**//"
-            f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
-            f"**User ID:** `{str(user.id)}`\n"
-            f"**Reason:** `{reason}`",
+            r"**Blokir Pengguna**"
+            f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"**ID Pengguna:** `{str(user.id)}`\n"
+            f"**Alasan:** `{reason}`",
         )
     else:
         await edit_or_reply(
             bon,
-            f"**#Banned_User**\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n**User ID:** `{user.id}`\n**Action:** `Banned User by {owner}`",
+            f"**Blokir Pengguna**\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n**ID Pengguna:** `{user.id}`\n**Aksi:** `Pengguna diblokir oleh {owner}`",
         )
 
 
@@ -251,10 +251,10 @@ async def spider(spdr):
         return await edit_or_reply(spdr, "**Gagal Membisukan, Dia Adalah Pembuat Saya 🤪**")
     await edit_or_reply(
         spdr,
-        r"**#Muted_User**"
-        f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
-        f"**User ID:** `{user.id}`\n"
-        f"**Action:** `Mute by {owner}`",
+        r"**Bisukan Pengguna**"
+        f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
+        f"**ID Pengguna:** `{user.id}`\n"
+        f"**Aksi:** `Dibisukan oleh {owner}`",
     )
     if mute(spdr.chat_id, user.id) is False:
         return await edit_delete(spdr, "**ERROR:** `Pengguna Sudah Dibisukan.`")
@@ -263,18 +263,18 @@ async def spider(spdr):
         if reason:
             await edit_or_reply(
                 spdr,
-                r"**#DMuted_User**"
-                f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
-                f"**User ID:** `{user.id}`\n"
-                f"**Reason:** `{reason}`",
+                r"**Bisukan Pengguna**"
+                f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
+                f"**ID Pengguna:** `{user.id}`\n"
+                f"**Alasan:** `{reason}`",
             )
         else:
             await edit_or_reply(
                 spdr,
-                r"**#DMute_User**"
-                f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
-                f"**User ID:** `{user.id}`\n"
-                f"**Action:** `DMute by {owner}`",
+                r"**Bisukan Pengguna**"
+                f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
+                f"**ID Pengguna:** `{user.id}`\n"
+                f"**Aksi:** `Dibisukan oleh {owner}`",
             )
     except UserIdInvalidError:
         return await edit_delete(spdr, "**Terjadi ERROR!**")
@@ -356,9 +356,9 @@ async def ungmoot(un_gmute):
         return
     await edit_or_reply(un_gmute, "`Membuka Global Bisu Pengguna...`")
     if ungmute(user.id) is False:
-        await un_gmute.edit("**ERROR!** Pengguna Sedang Tidak Di Global Bisu.")
+        await un_gmute.edit("**ERROR!** Pengguna Sedang Tidak Berhasil di Global Bisu.")
     else:
-        await edit_delete(un_gmute, "**Berhasil! Pengguna Sudah Tidak Dibisukan**")
+        await edit_delete(un_gmute, "**Berhasil! Pengguna Sudah Tidak Dibisukan.**")
 
 
 @geez_cmd(pattern="gmute(?: |$)(.*)")
@@ -391,18 +391,18 @@ async def gspider(gspdr):
     elif reason:
         await edit_or_reply(
             gspdr,
-            r"**#GMuted_User**"
-            f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
-            f"**User ID:** `{user.id}`\n"
-            f"**Reason:** `{reason}`",
+            r"**Global Bisu Pengguna**"
+            f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"**ID Pengguna:** `{user.id}`\n"
+            f"**Alasan:** `{reason}`",
         )
     else:
         await edit_or_reply(
             gspdr,
-            r"**#GMuted_User**"
-            f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
-            f"**User ID:** `{user.id}`\n"
-            f"**Action:** `Global Muted by {owner}`",
+            r"**Global Bisu Pengguna**"
+            f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"**ID Pengguna:** `{user.id}`\n"
+            f"**Aksi:** `Global Bisu oleh {owner}`",
         )
 
 
@@ -412,7 +412,7 @@ async def rm_deletedacc(show):
     del_u = 0
     del_status = "**Grup Bersih, Tidak Menemukan Akun Terhapus.**"
     if con != "clean":
-        await show.edit("`Mencari Akun Depresi...`")
+        await show.edit("`Mencari Akun Terhapus...`")
         async for user in show.client.iter_participants(show.chat_id):
             if user.deleted:
                 del_u += 1
@@ -428,7 +428,7 @@ async def rm_deletedacc(show):
     creator = chat.creator
     if not admin and not creator:
         return await show.edit("**Maaf Kamu Bukan Admin!**")
-    await show.edit("`Menghapus Akun Depresi...`")
+    await show.edit("`Membersihkan Akun Terhapus...`")
     del_u = 0
     del_a = 0
     async for user in show.client.iter_participants(show.chat_id):

@@ -100,8 +100,7 @@ async def _(ping):
     await twing.edit(
                      f" `TWICEE IMNIDA!!`🍭 \n"
                      f"** • Twinger :** `%sms` \n"
-                     f"** • Uptime :** `{uptime}` \n"
-                     f"** • ONCE :** [{user.first_name}](tg://user?id={user.id}) % (duration)
+                     f"** • Uptime :** `{uptime}` \n" % (duration)
     )
 
 

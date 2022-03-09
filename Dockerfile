@@ -1,4 +1,4 @@
-FROM akihiro69/akihiroproject:master
+FROM akihiro69/akihiroproject:akihiro69
 
 RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/akihiroproject/ \
     && chmod 777 /home/akihiroproject \

@@ -1,9 +1,9 @@
-FROM akihiro69/akihiroproject:akihiro69
+FROM akihiro69/AkihiroProject:master
 
-RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/akihiroproject/ \
-    && chmod 777 /home/akihiroproject \
-    && mkdir /home/akihiroproject/bin/
+RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/AkihiroProject/ \
+    && chmod 777 /home/AkihiroProject \
+    && mkdir /home/AkihiroProject/bin/
 
-WORKDIR /home/akihiroproject/
+WORKDIR /home/AkihiroProject/
 
 CMD [ "bash", "start" ]

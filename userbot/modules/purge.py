@@ -62,7 +62,7 @@ async def purgeme(delme):
         await message.delete()
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "**Berhasil Menghapus** " + str(count) + " **Kenangan**",
+        "**Berhasil Menghapus** " + str(count) + " **Pesan**",
     )
     await sleep(2)
     i = 1
@@ -171,7 +171,7 @@ async def purgto(purgke):
 
 CMD_HELP.update(
     {
-        "purge": f"**Plugin : **`Menghapus Kenangan Chat`\
+        "purge": f"**Plugin : **`Menghapus  Pesan`\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}purge`\
         \n  ❍▸ : **Menghapus semua pesan mulai dari pesan yang dibalas.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}purgefrom` atau `{cmd}pfrom`\

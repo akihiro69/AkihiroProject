@@ -1,3 +1,3 @@
-FROM akihiro69/akihiroproject:slim-buster
+FROM mrismanaziz/man-userbot:slim-buster
 
 CMD [ "bash", "start" ]

@@ -9,7 +9,7 @@ from userbot.utils import edit_or_reply, geez_cmd
 async def _(event):
     await event.client.send_message(
         event.chat_id,
-        "**Assalamualaikum Dulu Biar Sopan**",
+        "**Assalamu'alaikum**",
         reply_to=event.reply_to_msg_id,
     )
     await event.delete()
@@ -72,7 +72,7 @@ CMD_HELP.update(
     {
         "salam": f"**Plugin : **`salam`\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}p`\
-        \n  ❍▸ : **Assalamualaikum Dulu Biar Sopan..\
+        \n  ❍▸ : **Assalamualaikum.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}pe`\
         \n  ❍▸ : **salam Kenal dan salam\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}l`\

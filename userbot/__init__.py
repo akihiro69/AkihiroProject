@@ -575,8 +575,8 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f" 🈴 **akihirouserbot** 🈴 \n 🗃️ ••**Jumlah Module:** `{len(dugmeler)}` \n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️",
-                    await event.edit(
+                text = f" 🈴 **akihirouserbot** 🈴 \n 🗃️ ••**Jumlah Module:** `{len(dugmeler)}` \n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️"
+                await event.edit(
                     text,
                     file=logogeez,
                     buttons=buttons,

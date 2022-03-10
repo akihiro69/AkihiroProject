@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text= f" 🈴 **akihirouserbot** 🈴 \n 🗃️ ••**Jumlah Module:** `{len(dugmeler)}` \n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️",
+                    text= f" 🈴 **akihirouserbot** 🈴 \n🗃️ ••**Jumlah Module:** `{len(dugmeler)}`\n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -575,7 +575,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f" 🈴 **akihirouserbot** 🈴 \n 🗃️ ••**Jumlah Module:** `{len(dugmeler)}` \n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️"
+                text = f" 🈴 **akihirouserbot** 🈴 \n🗃️ ••**Jumlah Module:** `{len(dugmeler)}`\n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️"
                 await event.edit(
                     text,
                     file=logogeez,
@@ -605,7 +605,7 @@ with bot:
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
-                openlagi = custom.Button.inline("**Buka Lagi!** 📬", data="reopen")
+                openlagi = custom.Button.inline("Buka Lagi! 📬", data="reopen")
                 await event.edit(
                     " **Mode Help Buttonmu ditutup!** 📪", buttons=openlagi
                 )

@@ -45,7 +45,7 @@ LOGS.info(
     f"Join Grup https://t.me/AkihiroSupport"
 )
 
-LOGS.info(f"🍭 Akihiro - UserBot Berhasil Diaktfikan 🍭",
+LOGS.info(f"🍭 Akihiro - UserBot Berhasil Diaktifkan 🍭",
             )
 
 async def geez_userbot_on():
@@ -53,7 +53,7 @@ async def geez_userbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"🍭 **Akihiro - UserBot Berhasil Diaktfikan** 🍭\n╼┅━━━━━╍━━━━━┅╾\n❍▹ `Bot Of :` [{user.first_name}](tg://user?id={user.id})\n❍▹ `BotVer :` {BOT_VER}@{branch}\n╼┅━━━━━╍━━━━━┅╾",
+                f"🍭 **Akihiro - UserBot Sudah Nyalaaaa..!!** 🍭\n╼┅━━━━━╍━━━━━┅╾\n❍▹ `Bot Of :` [{user.first_name}](tg://user?id={user.id})\n❍▹ `BotVer :` {BOT_VER}@{branch}\n╼┅━━━━━╍━━━━━┅╾",
             )
     except Exception as e:
         LOGS.info(str(e))

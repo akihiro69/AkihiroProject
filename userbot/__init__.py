@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text= f"𝗮𝗸𝗶𝗵𝗶𝗿𝗼𝘂𝘀𝗲𝗿𝗯𝗼𝘁🈴 𝗶𝗻𝗹𝗶𝗻𝗲 𝗠𝗲𝗻𝘂\n\n📜 𝗣𝗲𝗺𝗶𝗹𝗶𝗸 [{user.first_name}](tg://user?id={user.id})\n🗃️ 𝗝𝘂𝗺𝗹𝗮𝗵 **{len(dugmeler)}** 𝗠𝗼𝗱𝘂𝗹𝗲",
+                    text= f" 🈴 **akihirouserbot** 🈴 \n 🗃️ ••**Jumlah Module:** `{len(dugmeler)}` \n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️,
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -575,8 +575,8 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"𝗮𝗸𝗶𝗵𝗶𝗿𝗼𝘂𝘀𝗲𝗿𝗯𝗼𝘁🈴 𝗶𝗻𝗹𝗶𝗻𝗲 𝗠𝗲𝗻𝘂\n\n📜 𝗣𝗲𝗺𝗶𝗹𝗶𝗸 [{user.first_name}](tg://user?id={user.id})\n🗃️ 𝗝𝘂𝗺𝗹𝗮𝗵 **{len(dugmeler)}** 𝗠𝗼𝗱𝘂𝗹𝗲"
-                await event.edit(
+                text = f" 🈴 **akihirouserbot** 🈴 \n 🗃️ ••**Jumlah Module:** `{len(dugmeler)}` \n📜 ••**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n⚙️ **InLine Menu** ⚙️,
+                    await event.edit(
                     text,
                     file=logogeez,
                     buttons=buttons,
@@ -605,9 +605,9 @@ with bot:
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
-                openlagi = custom.Button.inline("𝗕𝘂𝗸𝗮 𝗟𝗮𝗴𝗶 📬", data="reopen")
+                openlagi = custom.Button.inline("**Buka Lagi!** 📬", data="reopen")
                 await event.edit(
-                    "𝗠𝗼𝗱𝗲 𝗛𝗲𝗹𝗽 𝗕𝘂𝘁𝘁𝗼𝗻 𝗱𝗶𝘁𝘂𝘁𝘂𝗽 📪", buttons=openlagi
+                    " **Mode Help Buttonmu ditutup!** 📪", buttons=openlagi
                 )
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"

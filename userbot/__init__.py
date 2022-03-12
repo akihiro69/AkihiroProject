@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text= f"**akihirouserbot**🈴\n🗃️**Jumlah Module:** `{len(dugmeler)}`\n**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n**InLine Menu**",
+                    text= f"**akihirouserbot**🈴\n**Jumlah Module:** `{len(dugmeler)}`\n**Pemilik:** [{user.first_name}](tg://user?id={user.id})\n\n**InLine Menu**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):

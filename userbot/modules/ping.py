@@ -96,7 +96,7 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     user = await twing.client.get_me()
     await twing.edit(
-                     f"`TWICEE IMNIDA!!`🍭 \n"
+                     f"**TWICEE IMNIDA!!**🍭 \n"
                      f"**Twinger :** `%sms` \n"
                      f"**Uptime :** `{uptime}` \n" % (duration)
     )

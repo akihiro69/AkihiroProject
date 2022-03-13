@@ -70,7 +70,7 @@ async def _(ping):
     await xx.edit(
                   f"**AkihiroProject** 🈴\n"
                   f"**Pong !!** `%sms`\n"
-                  f"**Uptime** `- {uptime}`\n" % (duration)
+                  f"**Uptime** - `{uptime}`\n" % (duration)
      )
 
 
@@ -97,8 +97,8 @@ async def _(ping):
     user = await twing.client.get_me()
     await twing.edit(
                      f"**TWICEE IMNIDA** 🍭\n"
-                     f"**Twinger !!** `- %sms`\n"
-                     f"**Uptime** `- {uptime}`\n" % (duration)
+                     f"**Twinger !!** `%sms`\n"
+                     f"**Uptime** - `{uptime}`\n" % (duration)
     )
 
 

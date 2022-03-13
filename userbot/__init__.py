@@ -497,13 +497,13 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text= f"**AkihiroProject!!**🈴\n`Jumlah Module: {len(dugmeler)}`\n\n`InLine Menu`",
+                    text= f"Aᴋɪʜɪʀᴏ Pʀᴏᴊᴇᴄᴛ\nJᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇ **{len(dugmeler)}**\n\nMᴏᴅᴇ: Mᴇɴᴜ Sᴇʙᴀʀɪs",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Akihiro Ubot",
+                    description="Repository Akihiro Project",
                     url="https://t.me/AkihiroSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
                     text="**Akihiro Project**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [Akihiro69](https://t.me/akihiro69bot)\n**Support :** @AkihiroSupport\n❍▸ **Repository :** [Akihiro Project](https://github.com/akihiro69/AkihiroProject)\n➖➖➖➖➖➖➖➖➖➖",
@@ -575,7 +575,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**AkihiroProject!!**🈴\n`Jumlah Module: {len(dugmeler)}`\n\n`InLine Menu`"
+                text = f"Aᴋɪʜɪʀᴏ Pʀᴏᴊᴇᴄᴛ\nJᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇ `{len(dugmeler)}`\n\nMᴏᴅᴇ: Mᴇɴᴜ Sᴇʙᴀʀɪs"
                 await event.edit(
                     text,
                     file=logogeez,

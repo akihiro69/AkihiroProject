@@ -497,7 +497,7 @@ with bot:
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text= f"Aᴋɪʜɪʀᴏ Pʀᴏᴊᴇᴄᴛ\nJᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇ **{len(dugmeler)}**\n\nMᴏᴅᴇ: Mᴇɴᴜ Sᴇʙᴀʀɪs",
+                    text= f"**Aᴋɪʜɪʀᴏ Pʀᴏᴊᴇᴄᴛ**\n**Jᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇ** **{len(dugmeler)}**\n\n**Mᴏᴅᴇ: Mᴇɴᴜ Sᴇʙᴀʀɪs**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -575,7 +575,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"Aᴋɪʜɪʀᴏ Pʀᴏᴊᴇᴄᴛ\nJᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇ `{len(dugmeler)}`\n\nMᴏᴅᴇ: Mᴇɴᴜ Sᴇʙᴀʀɪs"
+                text = f"**Aᴋɪʜɪʀᴏ Pʀᴏᴊᴇᴄᴛ**\n**Jᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇ** **{len(dugmeler)}**\n\n**Mᴏᴅᴇ: Mᴇɴᴜ Sᴇʙᴀʀɪs**"
                 await event.edit(
                     text,
                     file=logogeez,

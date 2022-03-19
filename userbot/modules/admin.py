@@ -547,11 +547,11 @@ async def kick(usr):
         return await edit_delete(usr, NO_PERM + f"\n{e}")
     if reason:
         await xxnx.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup**\n**Alasan:** `{reason}`"
+            f"[{user.first_name}](tg://user?id={user.id}) **Telah Ditendang Dari Grup**\n**Alasan:** `{reason}`"
         )
     else:
         await xxnx.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup**",
+            f"[{user.first_name}](tg://user?id={user.id}) **Telah Ditendang Dari Grup**",
         )
 
 

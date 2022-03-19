@@ -64,7 +64,7 @@ async def gban(event):
         await gbun.edit("**Maaf Anda Tidak Mempunyai Hak Admin Di Group Ini**")
         return
     await gbun.edit(
-        f"**Memulai Global Blokir dari** [{user.first_name}](tg://user?id={user.id}) **dalam** `{len(san)}` **Grup**"
+        f"**Memulai Global Blokir ** [{user.first_name}](tg://user?id={user.id}) **dalam** `{len(san)}` **Grup**"
     )
     for i in range(fiz):
         try:
@@ -113,7 +113,7 @@ async def ungban(event):
         await ungbun.edit("**Terjadi Kesalahan Karna Anda Bukan lah admin.**")
         return
     await ungbun.edit(
-        f"**Memulai Lepas Blokir dari** [{user.first_name}](tg://user?id={user.id}) **dalam** `{len(san)}` **Grup**"
+        f"**Memulai Lepas Blokir ** [{user.first_name}](tg://user?id={user.id}) **dalam** `{len(san)}` **Grup**"
     )
     for i in range(fiz):
         try:

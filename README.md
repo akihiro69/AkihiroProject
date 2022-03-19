@@ -6,17 +6,17 @@
 
 <p align="center">
 
-[![Stars](https://img.shields.io/github/stars/vckyou/GeezProjects?style=flat-square&color=yellow)](https://github.com/vckyou/GeezProjects/stargazers)
-[![Forks](https://img.shields.io/github/forks/vckyou/GeezProjects?style=flat-square&color=orange)](https://github.com/vckyou/GeezProjects/fork)
-[![Size](https://img.shields.io/github/repo-size/vckyou/GeezProjects?style=flat-square&color=green)](https://github.com/vckyou/GeezProjects/)   
+[![Stars](https://img.shields.io/github/stars/akihiro69/AkihiroProject?style=flat-square&color=yellow)](https://github.com/akihiro69/AkihiroProject/stargazers)
+[![Forks](https://img.shields.io/github/forks/akihiro69/AkihiroProject?style=flat-square&color=orange)](https://github.com/akihiro69/AkihiroProject/fork)
+[![Size](https://img.shields.io/github/repo-size/akihiro69/AkihiroProject?style=flat-square&color=green)](https://github.com/akihiro69/AkihiroProject/)   
 [![Python](https://img.shields.io/badge/Python-v3.10.2-blue)](https://www.python.org/)
-[![CodeFactor](https://www.codefactor.io/repository/github/vckyou/geezprojects/badge/master)](https://www.codefactor.io/repository/github/vckyou/geezprojects/overview/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/akihiro69/akihiroproject/badge/master)](https://www.codefactor.io/repository/github/vckyou/geezprojects/overview/master)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/vckyou/GeezProjects/graphs/commit-activity)
 [![Docker Pulls](https://img.shields.io/docker/pulls/vckyouuu/geez?style=flat-square)](https://img.shields.io/docker/pulls/vckyouuu/geez?style=flat-square)   
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vckyou/GeezProjects)
-[![Contributors](https://img.shields.io/github/contributors/vckyou/GeezProjects?style=flat-square&color=green)](https://github.com/vckyou/GeezProjects/graphs/contributors)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/akihiro69/AkihiroProject)
+[![Contributors](https://img.shields.io/github/contributors/akihiro69/AkihiroProject?style=flat-square&color=green)](https://github.com/akihiro69/AkihiroProject/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/vckyou/GeezProjects/blob/main/LICENSE)   
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/akihiro69/AkihiroProject/blob/main/LICENSE)   
 ----
 
 [AkihiroProject](https://github.com/akihiro69/AkihiroProject) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.

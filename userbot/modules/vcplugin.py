@@ -2,6 +2,7 @@
 # Thanks To @tofik_dn || https://github.com/tofikdn
 # FROM GeezProjects <https://github.com/vckyou/GeezProjects>
 #
+# Recode by @vckyaz
 
 from pytgcalls import StreamType
 from pytgcalls.types import Update
@@ -12,9 +13,18 @@ from pytgcalls.types.input_stream.quality import (
     LowQualityVideo,
     MediumQualityVideo,
 )
+from pytgcalls.exceptions import (
+    NodeJSNotInstalled,
+    TooOldNodeJSVersion,
+    NoActiveGroupCall,
+    AlreadyJoinedError,
+    NotInGroupCallError
+)
 
 from telethon.tl import types
 from telethon.utils import get_display_name
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.functions.channels import GetFullChannelRequest
 from youtubesearchpython import VideosSearch
 
 from userbot import CMD_HANDLER as cmd
@@ -33,6 +43,9 @@ from userbot.utils.queues.queues import (
 )
 from userbot.utils.thumbnail import gen_thumb
 
+async def get_call(event):
+    call = await event.client(GetFullChannelRequest(event.chat.id))
+    return call.full_chat.call
 
 def vcmention(user):
     full_name = get_display_name(user)
@@ -463,6 +476,54 @@ async def vc_volume(event):
             await edit_delete(event, f"**ERROR:** `{e}`", 30)
     else:
         await edit_delete(event, "**Tidak Sedang Memutar Streamming**")
+
+# credits by @vckyaz < vicky \>
+# FROM GeezProjects < https://github.com/vckyou/GeezProjects \>
+# ambil boleh apus credits jangan ya ka:)
+
+@geez_cmd(pattern="joinvc(?: |$)(.*)")
+async def join_(event):
+    geezav = await edit_or_reply(event, f"**Processing**")
+    if len(event.text.split()) > 1:
+        chat = event.text.split()[1]
+        try:
+            chat = await event.client(GetFullUserRequest(chat))
+        except (NodeJSNotInstalled, TooOldNodeJSVersion):
+            return await edit_or_reply(event, "NodeJs is not installed or installed version is too old.")
+        except AlreadyJoinedError:
+            await call_py.leave_group_call(chat)
+            await asyncio.sleep(3)
+        except Exception as e:
+            return await geezav.delete(f'Error during Joining the Call\n`{e}`')
+    else:
+        chat = event.chat_id
+        from_user = vcmention(event.sender)
+    if not call_py.is_connected:
+        await call_py.start()
+    await call_py.join_group_call(
+        chat,
+        AudioPiped(
+            'http://duramecho.com/Misc/SilentCd/Silence01s.mp3'
+        ),
+        stream_type=StreamType().pulse_stream,
+    )
+    await geezav.edit(f"**{from_user} Berhasil Naik Ke VC Group!**")
+
+
+@geez_cmd(pattern="leavevc(?: |$)(.*)")
+async def leavevc(event):
+    """ leave video chat """
+    geezav = await edit_or_reply(event, "Processing")
+    chat_id = event.chat_id
+    from_user = vcmention(event.sender)
+    if from_user:
+        try:
+            await call_py.leave_group_call(chat_id)
+        except (NotInGroupCallError, NoActiveGroupCall):
+            pass
+        await geezav.edit(f"**{from_user} Berhasil Turun Dari VC Group.**")
+    else:
+        await geezav.delete(f"**Maaf {from_user} Tidak Berada Di VC Group**")
 
 
 @geez_cmd(pattern="playlist$")

@@ -53,7 +53,7 @@ async def geez_userbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"_No Log Error. Deployment Success! Enjoy Userbot!_"
+                f"__No Log Error. Deployment Success! Enjoy Userbot!__"\n
                 f"🍭 **Akihiro - UserBot Udah Nyalaaaa..!!** 🍭\n╼┅━━━━━╍━━━━━┅╾\n❍▹ `Bot Of :` [{user.first_name}](tg://user?id={user.id})\n❍▹ `BotVer :` {BOT_VER}@{branch}\n╼┅━━━━━╍━━━━━┅╾",
             )
     except Exception as e:

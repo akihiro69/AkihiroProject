@@ -39,7 +39,7 @@ for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
 LOGS.info(f"Total Clients = {total} User")
-LOGS.info(f"Jika {user.first_name}
+LOGS.info(f" {user.first_name} ")
 LOGS.info(f"💢 AkihiroProject Berhasil Diaktfikan 💢")
 
 

@@ -481,9 +481,9 @@ async def vc_volume(event):
 # FROM GeezProjects < https://github.com/vckyou/GeezProjects \>
 # ambil boleh apus credits jangan ya ka:)
 
-@geez_cmd(pattern="joinvc(?: |$)(.*)")
+@geez_cmd(pattern="joinvcs(?: |$)(.*)")
 async def join_(event):
-    geezav = await edit_or_reply(event, f"**Processing**")
+    geezav = await edit_or_reply(event, f"`Processing...`")
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
         try:
@@ -494,7 +494,7 @@ async def join_(event):
             await call_py.leave_group_call(chat)
             await asyncio.sleep(3)
         except Exception as e:
-            return await geezav.delete(f'Error during Joining the Call\n`{e}`')
+            return await geezav.delete(f'`Error during Joining the Call`\n`{e}`')
     else:
         chat = event.chat_id
         from_user = vcmention(event.sender)
@@ -507,13 +507,13 @@ async def join_(event):
         ),
         stream_type=StreamType().pulse_stream,
     )
-    await geezav.edit(f"**{from_user} Berhasil Naik Ke VC Group!**")
+    await geezav.edit(f"`• Joined {chat_id}`")
 
 
-@geez_cmd(pattern="leavevc(?: |$)(.*)")
+@geez_cmd(pattern="leavevcs(?: |$)(.*)")
 async def leavevc(event):
     """ leave video chat """
-    geezav = await edit_or_reply(event, "Processing")
+    geezav = await edit_or_reply(event, "`Processing...`")
     chat_id = event.chat_id
     from_user = vcmention(event.sender)
     if from_user:
@@ -521,9 +521,9 @@ async def leavevc(event):
             await call_py.leave_group_call(chat_id)
         except (NotInGroupCallError, NoActiveGroupCall):
             pass
-        await geezav.edit(f"**{from_user} Berhasil Turun Dari VC Group.**")
+        await geezav.edit(f"`• Leavevc {chat_id}`")
     else:
-        await geezav.delete(f"**Maaf {from_user} Tidak Berada Di VC Group**")
+        await geezav.delete(f"`Sorry, {from_user} not in VC Group`")
 
 
 @geez_cmd(pattern="playlist$")

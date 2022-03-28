@@ -10,7 +10,7 @@ import sys
 from importlib import import_module
 
 import requests
-from pyrogram import idle
+from pytgcalls import idle
 from telethon.tl.functions.channels import InviteToChannelRequest
 
 from userbot import BOT_TOKEN, BOT_USERNAME, BOT_VER, BOTLOG_CHATID
@@ -21,7 +21,6 @@ from userbot.utils import autobot, checking
 try:
     bot.start()
     call_py.start()
-    idle()
     user = bot.get_me()
     blacklistgeez = requests.get(
         "https://raw.githubusercontent.com/vckyou/Reforestation/master/blacklistgeez.json"
@@ -30,7 +29,7 @@ try:
         LOGS.warning(
             "NAMPAKNYA USERBOT TIDAK DAPAT BEKERJA, MUNGKIN ANDA TELAH DI BLACKLIST OLEH PEMILIK USERBOT.\nCredits: @VckyouuBitch"        )
         sys.exit(1)
-    if 5155140917 not in DEVS:
+    if 874946835 not in DEVS:
         LOGS.warning(
             f"EOL\nAkihiroProject v{BOT_VER}, Copyright © 2021-2022 AKIHIRO69 <https://github.com/akihiro69>"
         )

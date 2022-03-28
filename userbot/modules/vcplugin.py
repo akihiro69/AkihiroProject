@@ -488,13 +488,8 @@ async def join_(event):
         chat = event.text.split()[1]
         try:
             chat = await event.client(GetFullUserRequest(chat))
-        except (NodeJSNotInstalled, TooOldNodeJSVersion):
-            return await edit_or_reply(event, "NodeJs is not installed or installed version is too old.")
-        except AlreadyJoinedError:
-            await call_py.leave_group_call(chat)
-            await asyncio.sleep(3)
         except Exception as e:
-            return await geezav.delete(f'`Error during Joining the Call`\n`{e}`')
+            await edit_delete(event, f"**ERROR:** `{e}`", 30)
     else:
         chat = event.chat_id
         from_user = vcmention(event.sender)
@@ -507,8 +502,10 @@ async def join_(event):
         ),
         stream_type=StreamType().pulse_stream,
     )
-    await geezav.edit(f"`• Joined {chat_id}`")
-
+    try:
+        await geezav.edit(f"`• Joinvcs {chat_id}`")
+    except Exception as ex:
+        await edit_delete(event, f"**ERROR:** `{ex}`")
 
 @geez_cmd(pattern="leavevcs(?: |$)(.*)")
 async def leavevc(event):
@@ -521,7 +518,7 @@ async def leavevc(event):
             await call_py.leave_group_call(chat_id)
         except (NotInGroupCallError, NoActiveGroupCall):
             pass
-        await geezav.edit(f"`• Leavevc {chat_id}`")
+        await geezav.edit(f"`• Leavevcs {chat_id}`")
     else:
         await geezav.delete(f"`Sorry, {from_user} not in VC Group`")
 
@@ -578,22 +575,26 @@ async def kickedvc(_, chat_id: int):
 CMD_HELP.update(
     {
         "vcplugin": f"**Plugin : **`vcplugin`\
-        \n\n   :** `{cmd}play` <Judul Lagu/Link YT>\
-        \n   : **Untuk Memutar Lagu di voice chat group dengan akun kamu\
-        \n\n   :** `{cmd}vplay` <Judul Video/Link YT>\
-        \n   : **Untuk Memutar Video di voice chat group dengan akun kamu\
-        \n\n   :** `{cmd}end`\
-        \n   : **Untuk Memberhentikan video/lagu yang sedang putar di voice chat group\
-        \n\n   :** `{cmd}skip`\
-        \n   : **Untuk Melewati video/lagu yang sedang di putar\
-        \n\n   :** `{cmd}pause`\
-        \n   : **Untuk memberhentikan video/lagu yang sedang diputar\
-        \n\n   :** `{cmd}resume`\
-        \n   : **Untuk melanjutkan pemutaran video/lagu yang sedang diputar\
-        \n\n   :** `{cmd}volume` 1-200\
-        \n   : **Untuk mengubah volume (Membutuhkan Hak admin)\
-        \n\n   :** `{cmd}playlist`\
-        \n   : **Untuk menampilkan daftar putar Lagu/Video\
+        \n\n  Command :** `{cmd}play` <Judul Lagu/Link YT>\
+        \n  • : **Untuk Memutar Lagu di voice chat group dengan akun kamu\
+        \n\n  Command :** `{cmd}vplay` <Judul Video/Link YT>\
+        \n  • : **Untuk Memutar Video di voice chat group dengan akun kamu\
+        \n\n  Command :** `{cmd}end`\
+        \n  • : **Untuk Memberhentikan video/lagu yang sedang putar di voice chat group\
+        \n\n  Command :** `{cmd}skip`\
+        \n  • : **Untuk Melewati video/lagu yang sedang di putar\
+        \n\n  Command :** `{cmd}pause`\
+        \n  • : **Untuk memberhentikan video/lagu yang sedang diputar\
+        \n\n  Command :** `{cmd}resume`\
+        \n  • : **Untuk melanjutkan pemutaran video/lagu yang sedang diputar\
+        \n\n  Command :** `{cmd}volume` 1-200\
+        \n  • : **Untuk mengubah volume (Membutuhkan Hak admin)\
+        \n\n  Command :** `{cmd}playlist`\
+        \n  • : **Untuk menampilkan daftar putar Lagu/Video\
+        \n\n  Command :** `{cmd}joinvcs`\
+        \n  • : **Untuk naik ke Obrolan Suara**
+        \n\n  Command :** `{cmd}leavevcs`\
+        \n  • : **Untuk turun dari Obrolan Suara**
     "
     }
 )

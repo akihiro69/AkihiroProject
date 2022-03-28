@@ -21,6 +21,7 @@ from userbot.utils import autobot, checking
 try:
     bot.start()
     call_py.start()
+    idle()
     user = bot.get_me()
     blacklistgeez = requests.get(
         "https://raw.githubusercontent.com/vckyou/Reforestation/master/blacklistgeez.json"

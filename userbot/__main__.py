@@ -28,7 +28,7 @@ try:
         sys.exit(1)
     if 874946835 not in DEVS:
         LOGS.warning(
-            f"EOL\nGeezProjects v{BOT_VER}, Copyright © 2021-2022 VICKY <https://github.com/vckyou>"
+            f"EOL\nAkihiroProject v{BOT_VER}, Copyright © 2021-2022 AKIHIRO69 <https://github.com/akihiro69>"
         )
         sys.exit(1)
 except Exception as e:

@@ -592,9 +592,9 @@ CMD_HELP.update(
         \n\n  Command :** `{cmd}playlist`\
         \n  • : **Untuk menampilkan daftar putar Lagu/Video\
         \n\n  Command :** `{cmd}joinvcs`\
-        \n  • : **Untuk naik ke Obrolan Suara**
+        \n  • : **Untuk naik ke Obrolan Suara\
         \n\n  Command :** `{cmd}leavevcs`\
-        \n  • : **Untuk turun dari Obrolan Suara**
+        \n  • : **Untuk turun dari Obrolan Suara\
     "
     }
 )

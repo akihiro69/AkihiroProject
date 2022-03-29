@@ -504,7 +504,7 @@ async def join_(event):
         stream_type=StreamType().pulse_stream,
     )
     try:
-        await geezav.edit(f"`• joinvcs {chat_id}`")
+        await geezav.edit(f"• **Successfully Join VC :** `{chat_id}` •")
     except Exception as ex:
         await edit_delete(event, f"**ERROR:** `{ex}`")
 
@@ -519,7 +519,7 @@ async def leavevc(event):
             await call_py.leave_group_call(chat_id)
         except (NotInGroupCallError, NoActiveGroupCall):
             pass
-        await geezav.edit(f"`• leavevcs {chat_id}`")
+        await geezav.edit(f"• **Successfully Left VC :** `{chat_id}` •")
     else:
         await geezav.delete(f"`Sorry, {from_user} not in VC Group`")
 

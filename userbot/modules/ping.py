@@ -102,6 +102,45 @@ async def _(ping):
     )
 
 
+@geez_cmd(pattern="pink$")
+async def redis(pong):
+    """For .ping command, ping the userbot from any chat."""
+    await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    ram = await edit_or_reply(pong, "**𓀐.....................................𓂸**")
+    await ram.edit("**𓀐..................................𓂸..**")
+    await ram.edit("**𓀐................................𓂸....**")
+    await ram.edit("**𓀐..............................𓂸......**")
+    await ram.edit("**𓀐............................𓂸........**")
+    await ram.edit("**𓀐..........................𓂸..........**")
+    await ram.edit("**𓀐.......................𓂸.............**")
+    await ram.edit("**𓀐.....................𓂸...............**")
+    await ram.edit("**𓀐...................𓂸.................**")
+    await ram.edit("**𓀐..................𓂸..................**")
+    await ram.edit("**𓀐................𓂸....................**")
+    await ram.edit("**𓀐..............𓂸......................**")
+    await ram.edit("**𓀐............𓂸........................**")
+    await ram.edit("**𓀐..........𓂸..........................**")
+    await ram.edit("**𓀐........𓂸............................**")
+    await ram.edit("**𓀐.......𓂸.............................**")
+    await ram.edit("**𓀐....𓂸...............................**")
+    await ram.edit("**𓀐..𓂸.................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓀐𓂸...................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓀐𓂸...................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓂺**")
+    await asyncio.sleep(2)
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    user= await pong.client.get_me()
+    await pong.edit(
+        f"**➾ OWNER      :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"**➾ Kecepatan : ** %sms  \n"
+        f"**➾ Branch       : ** [AkihiroProject](https://t.me/akihiro69) \n" % (duration)) 
+
+
 @geez_cmd(pattern="rping$")
 async def _(pong):
     """For .ping command, ping the userbot from any chat."""
@@ -276,8 +315,8 @@ CMD_HELP.update(
         \n  ❍▸ : **Untuk menunjukkan ping userbot.\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}pong`\
         \n  ❍▸ : **Sama seperti perintah ping\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}twing`\
-        \n  ❍▸ : **TWICE Ping\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}rping` ; `{cmd}tping` ; `{cmd}fping` ; `{cmd}pink` ; `{cmd}keping` \
+        \n  ❍▸ : **Sama Seperti perintah ping (Lihat sendiri)\
     "
     }
 )

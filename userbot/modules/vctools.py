@@ -47,7 +47,7 @@ async def start_voice(c):
         return
     try:
         await c.client(startvc(c.chat_id))
-        await edit_or_reply(c, "`Voice Chat Started...`")
+        await edit_or_reply(c, "`Obrolan Suara DiAktifkan!`")
     except Exception as ex:
         await edit_delete(c, f"**ERROR:** `{ex}`")
 
@@ -64,27 +64,27 @@ async def stop_voice(c):
         return
     try:
         await c.client(stopvc(await get_call(c)))
-        await edit_or_reply(c, "`Voice Chat Stopped...`")
+        await edit_or_reply(c, "`Obrolan Suara DiNonaktifkan!`")
     except Exception as ex:
         await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
 @geez_cmd(pattern="vcinvite")
 async def _(c):
-    xxnx = await edit_or_reply(c, "`Inviting Members to Voice Chat...`")
+    xxnx = await edit_or_reply(c, "`Mengundang Anggota ke Obrolan Suara...`")
     users = []
     z = 0
     async for x in c.client.iter_participants(c.chat_id):
         if not x.bot:
             users.append(x.id)
-    botman = list(user_list(users, 6))
-    for p in botman:
+    geez = list(user_list(users, 6))
+    for p in geez:
         try:
             await c.client(invitetovc(call=await get_call(c), users=p))
             z += 6
         except BaseException:
             pass
-    await xxnx.edit(f"`{z}` **Orang Berhasil diundang ke VCG**")
+    await xxnx.edit(f"`{z}` **Anggota Berhasil diundang ke Obrolan Suara**")
 
 
 @geez_cmd(pattern="vctitle(?: |$)(.*)")
@@ -103,7 +103,7 @@ async def change_title(e):
         return
     try:
         await e.client(settitle(call=await get_call(e), title=title.strip()))
-        await edit_or_reply(e, f"**Berhasil Mengubah Judul VCG Menjadi** `{title}`")
+        await edit_or_reply(e, f"**Berhasil Mengubah Judul Obrolan Suara Menjadi** `{title}`")
     except Exception as ex:
         await edit_delete(e, f"**ERROR:** `{ex}`")
 
@@ -111,14 +111,18 @@ async def change_title(e):
 CMD_HELP.update(
     {
         "vcg": f"**Plugin : **`vcg`\
-        \n\n   :** `{cmd}startvc`\
-        \n   : **Untuk Memulai voice chat group\
-        \n\n   :** `{cmd}stopvc`\
-        \n   : **Untuk Memberhentikan voice chat group\
-        \n\n   :** `{cmd}vctitle` <title vcg>\
-        \n   : **Untuk Mengubah title/judul voice chat group\
-        \n\n   :** `{cmd}vcinvite`\
-        \n   : **Mengundang Member group ke voice chat group\
+        \n\n  Command :** `{cmd}startvc`\
+        \n  • : **Untuk Memulai voice chat group\
+        \n\n  Command :** `{cmd}stopvc`\
+        \n  • : **Untuk Memberhentikan voice chat group\
+        \n\n  Command :** `{cmd}vctitle` <title vcg>\
+        \n  • : **Untuk Mengubah title/judul voice chat group\
+        \n\n  Command :** `{cmd}vcinvite`\
+        \n  • : **Mengundang Member group ke voice chat group\
+        \n\n  Command :** `{cmd}joinvc`\
+        \n  • : Untuk Join VC Group\
+        \n\n  Command :** `{cmd}leavevc`\
+        \n  • : Untuk Turun Dari VC Group\
     "
     }
 )

@@ -100,12 +100,26 @@ while 0 < 6:
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        DEVS = [5155140917]
+        DEVS = [874946835]
         break
     DEVS = _DEVS.json()
     break
 
 del _DEVS
+
+while 0 < 6:
+    _BLACKLIST = get(
+        "https://raw.githubusercontent.com/vckyou/Reforestation/master/blacklistgeez.json"
+    )
+    if _BLACKLIST.status_code != 200:
+        if 0 != 5:
+            continue
+        blacklistgeez = []
+        break
+    blacklistgeez = _BLACKLIST.json()
+    break
+
+del _BLACKLIST
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
@@ -113,7 +127,7 @@ BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 # For Blacklist Group Support
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
-    BLACKLIST_CHAT = [-1001459812644]
+    BLACKLIST_CHAT = [-1001212507982]
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or 0)
@@ -121,6 +135,13 @@ API_HASH = str(os.environ.get("API_HASH") or None)
 
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
+
+# Userbot Session String
+STRING_SESSION = os.environ.get("STRING_SESSION", None)
+STRING_2 = os.environ.get("STRING_2", None)
+STRING_3 = os.environ.get("STRING_3", None)
+STRING_4 = os.environ.get("STRING_4", None)
+STRING_5 = os.environ.get("STRING_5", None)
 
 # Logging channel/group ID configuration.
 BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID") or 0)
@@ -186,7 +207,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", "Hey, I Am Akihiro Userbot.")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Akihiro")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "AkihiroProject")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "⚡️")

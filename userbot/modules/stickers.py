@@ -9,15 +9,14 @@
 
 import asyncio
 import io
-import os
 import math
-import random
 import urllib.request
 from os import remove
 
 import requests
 from bs4 import BeautifulSoup as bs
 from PIL import Image
+from secrets import choice
 from telethon import events
 from telethon.errors import PackShortNameOccupiedError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -33,12 +32,11 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_document
 
-from userbot import BOT_USERNAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot import S_PACK_NAME as custompack
 from userbot import tgbot
-from userbot.utils.tools import animator, create_quotly
+from userbot.utils.tools import animator
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.utils import edit_delete, edit_or_reply, geez_cmd
 
@@ -49,87 +47,6 @@ KANGING_STR = [
     "Ijin Colong Stickernya Yaa :D",
 ]
 
-def verify_cond(geezarray, text):
-    return any(i in text for i in geezarray)
-
-async def delpack(xx, conv, cmd, args, packname):
-    try:
-        await conv.send_message(cmd)
-    except YouBlockedUserError:
-        await xx.edit("You have blocked the @stickers bot. unblock it and try.")
-        return None, None
-    await conv.send_message("/delpack")
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.send_message(packname)
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.send_message("Yes, I am totally sure.")
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-
-async def newpacksticker(
-    xx,
-    conv,
-    cmd,
-    args,
-    pack,
-    packnick,
-    is_video,
-    emoji,
-    packname,
-    is_anim,
-    stfile,
-    otherpack=False,
-    pkang=False,
-):
-    try:
-        await conv.send_message(cmd)
-    except YouBlockedUserError:
-        await xx.edit("You have blocked the @stickers bot. unblock it and try.")
-        if not pkang:
-            return None, None, None
-        return None, None
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.send_message(packnick)
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-    if is_video:
-        await conv.send_file("animate.webm")
-    elif is_anim:
-        await conv.send_file("AnimatedSticker.tgs")
-        os.remove("AnimatedSticker.tgs")
-    else:
-        stfile.seek(0)
-        await conv.send_file(stfile, force_document=True)
-    rsp = await conv.get_response()
-    if not verify_cond(custompack, rsp.text):
-        await xx.edit(
-            f"Failed to add sticker, use @Stickers bot to add the sticker manually.\n**error :**{rsp}"
-        )
-        if not pkang:
-            return None, None, None
-        return None, None
-    await conv.send_message(emoji)
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.get_response()
-    await conv.send_message("/publish")
-    if is_anim:
-        await conv.get_response()
-        await conv.send_message(f"<{packnick}>")
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.send_message("/skip")
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.get_response()
-    await conv.send_message(packname)
-    await args.client.send_read_acknowledge(conv.chat_id)
-    await conv.get_response()
-    await args.client.send_read_acknowledge(conv.chat_id)
-    if not pkang:
-        return otherpack, packname, emoji
-    return pack, packname
 
 @geez_cmd(pattern="(?:tikel|kang)\s?(.)?")
 async def kang(args):
@@ -145,22 +62,19 @@ async def kang(args):
 
     if not message:
         return await edit_delete(
-            args, "**Silahkan Reply Ke Pesan Media Untuk Mencuri Sticker itu!**"
+            args, "**Silahkan Reply Ke Pesan Media Untuk Mengambil Sticker itu!**"
         )
 
     if isinstance(message.media, MessageMediaPhoto):
-        xx = await edit_or_reply(args, f"`{random.choice(KANGING_STR)}`")
+        xx = await edit_or_reply(args, f"`{choice(KANGING_STR)}`")
         photo = io.BytesIO()
         photo = await args.client.download_media(message.photo, photo)
     elif isinstance(message.media, MessageMediaUnsupported):
         await edit_delete(
             args, "**File Tidak Didukung, Silahkan Reply ke Media Foto/GIF !**"
         )
-    elif message.message:
-        xx = await edit_or_reply(args, f"`{random.choice(KANGING_STR)}`")
-        photo = await create_quotly(message)
     elif message.file and "image" in message.file.mime_type.split("/"):
-        xx = await edit_or_reply(args, f"`{random.choice(KANGING_STR)}`")
+        xx = await edit_or_reply(args, f"`{choice(KANGING_STR)}`")
         photo = io.BytesIO()
         await args.client.download_file(message.media.document, photo)
         if (
@@ -171,7 +85,7 @@ async def kang(args):
             if emoji != "✨":
                 emojibypass = True
     elif message.file and "tgsticker" in message.file.mime_type:
-        xx = await edit_or_reply(args, f"`{random.choice(KANGING_STR)}`")
+        xx = await edit_or_reply(args, f"`{choice(KANGING_STR)}`")
         await args.client.download_file(message.media.document, "AnimatedSticker.tgs")
         attributes = message.media.document.attributes
         for attribute in attributes:
@@ -182,12 +96,12 @@ async def kang(args):
         photo = 1
     elif message.media.document.mime_type in ["video/mp4", "video/webm"]:
         if message.media.document.mime_type == "video/webm":
-            xx = await edit_or_reply(args, f"`{random.choice(KANGING_STR)}`")
+            xx = await edit_or_reply(args, f"`{choice(KANGING_STR)}`")
             await args.client.download_media(message.media.document, "Video.webm")
         else:
             xx = await edit_or_reply(args, "`Downloading...`")
             await animator(message, args, xx)
-            await xx.edit(f"`{random.choice(KANGING_STR)}`")
+            await xx.edit(f"`{choice(KANGING_STR)}`")
         is_video = True
         emoji = "✨"
         emojibypass = True
@@ -376,7 +290,7 @@ async def kang(args):
 
         await xx.edit(
             "** Sticker Berhasil Ditambahkan!**"
-            f"\n      >> **[KLIK DISINI](t.me/addstickers/{packname})** <<\n**Untuk Menggunakan Stickers**",
+            f"\n        >> **[KLIK DISINI](t.me/addstickers/{packname})** <<\n**Untuk Menggunakan Stickers**",
             parse_mode="md",
         )
 
@@ -407,9 +321,11 @@ async def resize_photo(photo):
 
 @geez_cmd(pattern="pkang(?:\\s|$)([\\s\\S]*)")
 async def _(event):
-    xnxx = await edit_or_reply(event, f"`{random.choice(KANGING_STR)}`")
+    xnxx = await edit_or_reply(event, f"`{choice(KANGING_STR)}`")
     reply = await event.get_reply_message()
     query = event.text[7:]
+    GEEZAV = await tgbot.get_me()
+    BOT_USERNAME = GEEZAV.username
     bot_ = BOT_USERNAME
     bot_un = bot_.replace("@", "")
     user = await event.client.get_me()
@@ -448,7 +364,7 @@ async def _(event):
             pack = int(x) + 1
         except BaseException:
             pack = 1
-        await xnxx.edit(f"`{random.choice(KANGING_STR)}`")
+        await xnxx.edit(f"`{choice(KANGING_STR)}`")
         try:
             create_st = await tgbot(
                 functions.stickers.CreateStickerSetRequest(
@@ -567,70 +483,6 @@ async def _(event):
             await xx.edit("**Maaf Paket yang dipilih tidak valid.**")
         else:
             await xx.edit("**Berhasil Menghapus Stiker.**")
-
-
-@geez_cmd(pattern="csticker ?(.*)")
-async def pussy(args):
-    "To kang a sticker." 
-    message = await args.get_reply_message()
-    user = await args.client.get_me()
-    userid = user.id
-    if message and message.media:
-        if message.file and "video/mp4" in message.file.mime_type:
-            xx = await edit_or_reply(args, "__⌛ Downloading..__")
-            sticker = await animator(message, args, xx)
-            await edit_or_reply(xx, f"`{random.choice(KANGING_STR)}`")
-        else:
-            await edit_delete(args, "`Reply to video/gif...!`")
-            return
-    else:
-        await edit_delete(args, "`I can't convert that...`")
-        return
-    cmd = "/newvideo"
-    packname = f"geez_{userid}_temp_pack"
-    response = urllib.request.urlopen(
-        urllib.request.Request(f"http://t.me/addstickers/{packname}")
-    )
-    htmlstr = response.read().decode("utf8").split("\n")
-    if (
-        "  A <strong>Telegram</strong> user has created the <strong>Sticker&nbsp;Set</strong>."
-        not in htmlstr
-    ):
-        async with args.client.conversation("@Stickers") as xconv:
-            await delpack(
-                xx,
-                xconv,
-                cmd,
-                args,
-                packname,
-            )
-    await xx.edit("`Hold on, making sticker...`")
-    async with args.client.conversation("@Stickers") as conv:
-        otherpack, packname, emoji = await newpacksticker(
-            xx,
-            conv,
-            "/newvideo",
-            args,
-            1,
-            "Geez",
-            True,
-            "😂",
-            packname,
-            False,
-            io.BytesIO(),
-        )
-    if otherpack is None:
-        return
-    await xx.delete()
-    await args.client.send_file(
-        args.chat_id,
-        sticker,
-        force_document=True,
-        caption=f"**[Sticker Preview](t.me/addstickers/{packname})**\n*__It will remove automatically on your next convert.__",
-        reply_to=message,
-    )
-    if os.path.exists(sticker):
-        os.remove(sticker)
 
 
 @geez_cmd(pattern="editsticker ?(.*)")

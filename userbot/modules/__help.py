@@ -20,9 +20,8 @@ from telethon.errors.rpcerrorlist import BotInlineDisabledError as noinline
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 
-from userbot import BOT_USERNAME
 from userbot import CMD_HANDLER as cmd
-from userbot import bot
+from userbot import bot, tgbot
 from userbot.utils import edit_or_reply, geez_cmd
 
 
@@ -30,10 +29,12 @@ from userbot.utils import edit_or_reply, geez_cmd
 async def _(event):
     if event.fwd_from:
         return
+    GEEZAV = await tgbot.get_me()
+    BOT_USERNAME = GEEZAV.username
     if BOT_USERNAME is not None:
         chat = "@Botfather"
         try:
-            results = await event.client.inline_query(BOT_USERNAME, "@AkihiroSupport")
+            results = await event.client.inline_query(BOT_USERNAME, "@GeezSupport")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )

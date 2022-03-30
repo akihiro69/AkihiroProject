@@ -7,18 +7,20 @@
 """ Userbot start point """
 
 import sys
+import requests
 from importlib import import_module
 
-import requests
 from pytgcalls import idle
-from telethon.tl.functions.channels import InviteToChannelRequest
 
-from userbot import BOT_TOKEN, BOT_USERNAME, BOT_VER, BOTLOG_CHATID
-from userbot import DEVS, LOGS, bot, branch, call_py
+from userbot import BOT_TOKEN, BOT_VER, blacklistgeez
+from userbot import DEVS, LOGS, LOOP, bot, call_py, BOTLOG_CHATID
+from userbot.clients import geez_userbot_on, multigeez
 from userbot.modules import ALL_MODULES
-from userbot.utils import autobot, checking
+from userbot.utils import autobot, autocreategroup, checking
 
 try:
+    client = multigeez()
+    total = 5 - client
     bot.start()
     call_py.start()
     user = bot.get_me()
@@ -31,7 +33,7 @@ try:
         sys.exit(1)
     if 874946835 not in DEVS:
         LOGS.warning(
-            f"EOL\nAkihiroProject v{BOT_VER}, Copyright © 2021-2022 AKIHIRO69 <https://github.com/akihiro69>"
+            f"EOL\nGeezProjects v{BOT_VER}, Copyright © 2021-2022 VICKY <https://github.com/vckyou>"
         )
         sys.exit(1)
 except Exception as e:
@@ -48,28 +50,17 @@ LOGS.info(
 LOGS.info(f"🍭 Akihiro - UserBot Berhasil Diaktifkan 🍭",
             )
 
-async def geez_userbot_on():
-    try:
-        if BOTLOG_CHATID != 0:
-            await bot.send_message(
-                BOTLOG_CHATID,
-                f"__No Log Error. Deployment Success! Enjoy Userbot!__\n"
-                f"🍭 **Akihiro - UserBot Udah Nyalaaaa..!!** 🍭\n╼┅━━━━━╍━━━━━┅╾\n❍▹ `Bot Of :` [{user.first_name}](tg://user?id={user.id})\n❍▹ `BotVer :` {BOT_VER}@{branch}\n╼┅━━━━━╍━━━━━┅╾",
-            )
-    except Exception as e:
-        LOGS.info(str(e))
-    try:
-        await bot(InviteToChannelRequest(int(BOTLOG_CHATID), [BOT_USERNAME]))
-    except BaseException:
-        pass
-
-
-bot.loop.run_until_complete(checking())
-bot.loop.run_until_complete(geez_userbot_on())
+LOOP.run_until_complete(geez_userbot_on())
+LOOP.run_until_complete(checking())
+if not BOTLOG_CHATID:
+    LOOP.run_until_complete(autocreategroup())
 if not BOT_TOKEN:
-    bot.loop.run_until_complete(autobot())
+    LOOP.run_until_complete(autobot())
 idle()
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
-    bot.run_until_disconnected()
+    try:
+        bot.run_until_disconnected()
+    except ConnectionError:
+        pass

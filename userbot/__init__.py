@@ -256,6 +256,8 @@ QUEUE_PIC = (
     os.environ.get("QUEUE_PIC") or ""
 )
 
+DEFAULT = list(map(int, b64decode("NTE1NTE0MDkxNw==").split()))
+
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)

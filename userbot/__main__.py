@@ -12,7 +12,7 @@ from importlib import import_module
 
 from pytgcalls import idle
 
-from userbot import BOT_TOKEN, BOT_VER, blacklistgeez
+from userbot import BOT_TOKEN, BOT_VER
 from userbot import DEVS, LOGS, LOOP, bot, call_py, BOTLOG_CHATID
 from userbot.clients import geez_userbot_on, multigeez
 from userbot.modules import ALL_MODULES

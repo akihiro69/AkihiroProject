@@ -138,7 +138,7 @@ async def redis(pong):
     await pong.edit(
         f"**➾ OWNER      :** [{user.first_name}](tg://user?id={user.id}) \n"
         f"**➾ Kecepatan : ** %sms  \n"
-        f"**➾ Branch       : ** [AkihiroProject](https://t.me/akihiro69) \n" % (duration)) 
+        f"**➾ Branch       : ** [akihiro69@master](https://t.me/akihiro69) \n" % (duration)) 
 
 
 @geez_cmd(pattern="rping$")
@@ -154,11 +154,12 @@ async def _(pong):
     await ram.edit("**80% ████████▒▒**")
     await ram.edit("**100% ██████████**")
     await ram.edit("✨")
+    await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
     await ram.edit(
-        f"**💥𝗞𝗢𝗡𝗧𝗢𝗟-𝗠𝗘𝗟𝗘𝗗𝗔𝗞💥**\n"
+        f"**🎉𝗔𝗞𝗜𝗛𝗜𝗥𝗢-𝗣𝗥𝗢𝗝𝗘𝗖𝗧🎉**\n"
         f"** ➠  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ➠  Uᴘᴛɪᴍᴇ  :** "

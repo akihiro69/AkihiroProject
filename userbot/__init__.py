@@ -113,7 +113,7 @@ del _DEVS
 
 while 0 < 6:
     _BLACKLIST = get(
-        "https://raw.githubusercontent.com/vckyou/Reforestation/master/blacklistgeez.json"
+        "https://raw.githubusercontent.com/akihiro69/Reforestation/master/blacklistakihiro.json"
     )
     if _BLACKLIST.status_code != 200:
         if 0 != 5:

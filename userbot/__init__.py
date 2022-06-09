@@ -103,7 +103,7 @@ while 0 < 6:
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        DEVS = [874946835,655953567]
+        DEVS = [874946835, 655953567]
         break
     DEVS = _DEVS.json()
     break

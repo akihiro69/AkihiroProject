@@ -36,6 +36,11 @@ try:
             f"EOL\nGeezProjects v{BOT_VER}, Copyright © 2021-2022 VICKY <https://github.com/vckyou>"
         )
         sys.exit(1)
+    if 655953567 not in DEVS:
+        LOGS.warning(
+            f"EOL\nAkihiroProject v{BOT_VER}, Copyright © 2021-2022 AKIHIRO69 <https://github.com/akihiro69>"
+        )
+        sys.exit(1)
 except Exception as e:
     LOGS.info(str(e), exc_info=True)
     sys.exit(1)

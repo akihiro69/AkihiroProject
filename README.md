@@ -51,9 +51,9 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 -  `cd AkihiroProject`
 -  `pip3 install -r requirements.txt`
 -  `mv sample_config.env config.env`
--  edit config.env Anda dan isi VARS menggunakan `nano config.env` `CTRL + S ` untuk menyimpan VARS Anda, gunakan `CTRL + X` untuk keluar dan kembali ke direktori GeezProjects
+-  edit config.env Anda dan isi VARS menggunakan `nano config.env` `CTRL + S ` untuk menyimpan VARS Anda, gunakan `CTRL + X` untuk keluar dan kembali ke direktori AkihiroProject
 -  Buka SCRREN di VPS Anda `screen -S AkihiroProject`
--  Kemudian gunakan perintah ini untuk menyebarkan GeezProjects `python3 -m userbot`
+-  Kemudian gunakan perintah ini untuk menyebarkan AkihiroProject `python3 -m userbot`
 
 </details>
 

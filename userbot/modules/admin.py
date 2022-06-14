@@ -195,7 +195,7 @@ async def ban(bon):
     if reason:
         await edit_or_reply(
             bon,
-            r"**Mampus Gw Ban**"
+            r"**Mampus Gw Ban!**"
             f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**ID Pengguna:** `{str(user.id)}`\n"
             f"**Alasan:** `{reason}`",
@@ -203,7 +203,7 @@ async def ban(bon):
     else:
         await edit_or_reply(
             bon,
-            f"**Mampus Gw Ban**\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n**ID Pengguna:** `{user.id}`\n**Aksi:** `Pengguna diblokir oleh {owner}`",
+            f"**Mampus Gw Ban!**\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n**ID Pengguna:** `{user.id}`\n**Aksi:** `Pengguna diblokir oleh {owner}`",
         )
 
 
@@ -248,10 +248,10 @@ async def spider(spdr):
             spdr, "`Ya gabisa lah tolol... Masa muttte diri sendiri.`"
         )
     if user.id in DEVS:
-        return await edit_or_reply(spdr, "`Yahahaha... gabisa bisuin dia kan. orang dia yg buat gw.")
+        return await edit_or_reply(spdr, "`Yahahaha... gabisa muttte dia kan. orang dia yg buat gw.")
     await edit_or_reply(
         spdr,
-        r"**Bisukan Pengguna**"
+        r"**Mampus Gw Muttte!**"
         f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
         f"**ID Pengguna:** `{user.id}`\n"
         f"**Aksi:** `Dibisukan oleh {owner}`",
@@ -263,7 +263,7 @@ async def spider(spdr):
         if reason:
             await edit_or_reply(
                 spdr,
-                r"**Mampus Gw Muttte**"
+                r"**Mampus Gw Muttte!**"
                 f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**ID Pengguna:** `{user.id}`\n"
                 f"**Alasan:** `{reason}`",
@@ -354,11 +354,11 @@ async def ungmoot(un_gmute):
     user = user[0]
     if not user:
         return
-    await edit_or_reply(un_gmute, "`Membuka Global Bisu Pengguna...`")
+    await edit_or_reply(un_gmute, "Wussshh...`")
     if ungmute(user.id) is False:
-        await un_gmute.edit("**ERROR!** Pengguna Sedang Tidak Berhasil di Global Bisu.")
+        await un_gmute.edit("**ERROR!** `Dia udah di Unmuttte goblok! Lu mau ngapain??`")
     else:
-        await edit_delete(un_gmute, "**Berhasil! Pengguna Sudah Tidak Dibisukan.**")
+        await edit_delete(un_gmute, "`Tuh... dah Gw Unmuttte gausah Nangess.")
 
 
 @geez_cmd(pattern="gmute(?: |$)(.*)")
@@ -379,19 +379,19 @@ async def gspider(gspdr):
     self_user = await gspdr.client.get_me()
     if user.id == self_user.id:
         return await edit_or_reply(
-            gspdr, "**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**"
+            gspdr, "**Lah... Gabisa GMuttte diri sendirilah Tolol!**"
         )
     if user.id in DEVS:
         return await edit_or_reply(
-            gspdr, "**Gagal Global Mute, Dia Adalah Pembuat Saya 🤪**"
+            gspdr, "`Yahaha... Gabisa kan, orang dia yg buat gw, wlee🤪`"
         )
-    await edit_or_reply(gspdr, "**Berhasil Membisukan Pengguna!**")
+    await edit_or_reply(gspdr, "**Mampus Gw GMuttte Lo anjg!**")
     if gmute(user.id) is False:
-        await edit_delete(gspdr, "**ERROR! Pengguna Sudah Dibisukan.**")
+        await edit_delete(gspdr, "**ERROR!** `Udah di GMuttte dia, lu mau ngapain??`")
     elif reason:
         await edit_or_reply(
             gspdr,
-            r"**Global Bisu Pengguna**"
+            r"**Mampus Gw GMuttte!**"
             f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**ID Pengguna:** `{user.id}`\n"
             f"**Alasan:** `{reason}`",
@@ -399,7 +399,7 @@ async def gspider(gspdr):
     else:
         await edit_or_reply(
             gspdr,
-            r"**Global Bisu Pengguna**"
+            r"**Mampus Gw GMuttte!**"
             f"\n\n**Akun:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**ID Pengguna:** `{user.id}`\n"
             f"**Aksi:** `Global Bisu oleh {owner}`",
@@ -427,7 +427,7 @@ async def rm_deletedacc(show):
     admin = chat.admin_rights
     creator = chat.creator
     if not admin and not creator:
-        return await show.edit("**Maaf Kamu Bukan Admin!**")
+        return await show.edit("`Lu bukan Admin Goblok!`")
     await show.edit("`Membersihkan Akun Terhapus...`")
     del_u = 0
     del_a = 0
@@ -487,7 +487,7 @@ async def get_admin(show):
 async def pin(event):
     to_pin = event.reply_to_msg_id
     if not to_pin:
-        return await edit_delete(event, "`Reply Pesan untuk Melakukan Pin.`", 30)
+        return await edit_delete(event, "`Lah, Pesan yg mana???`", 30)
     options = event.pattern_match.group(1)
     is_silent = bool(options)
     try:
@@ -496,7 +496,7 @@ async def pin(event):
         return await edit_delete(event, NO_PERM, 5)
     except Exception as e:
         return await edit_delete(event, f"`{e}`", 5)
-    await edit_delete(event, "`Tuh dah Gw Pin, liat atas. Manja bgt, Gini doang pke Bot`")
+    await edit_delete(event, "`Tuh dah Gw Pin, liat atas. Manja bgt, Gini doang pke Bot😌.`")
 
 
 @geez_cmd(pattern="unpin( all|$)")
@@ -507,7 +507,7 @@ async def pin(event):
     if not to_unpin and options != "all":
         return await edit_delete(
             event,
-            "**Lu mau lepas Pin pesan yg mana??, yg jelas ngentot!!**",
+            "`Lah, pesannya yg mana cok??`",
             45,
         )
     try:
@@ -518,7 +518,7 @@ async def pin(event):
         else:
             return await edit_delete(
                 event,
-                "**Lu mau Lepas Pin yg mana??, yg jelas ngentot!!**",
+                "`Lah, pesannya yg mana cok??`",
                 45,
             )
     except BadRequestError:

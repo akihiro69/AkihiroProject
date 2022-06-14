@@ -172,7 +172,7 @@ async def demote(event):
         await event.client(EditAdminRequest(event.chat_id, user.id, newrights, rank))
     except BadRequestError:
         return await eventman.edit(NO_PERM)
-    await edit_delete(eventman, "`[{user.first_name}](tg://user?id={user.id}), Ciaannn:(... bukan Admin lagi.`", 30)
+    await edit_delete(eventman, "`[{user.first_name}](tg://user?id={user.id}), Ciaannn:(... bukan Admin lagi yaaa.`", 30)
 
 
 @geez_cmd(pattern="ban(?:\s|$)([\s\S]*)")
@@ -224,7 +224,7 @@ async def nothanos(unbon):
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
         await edit_delete(unbon, "`Tuh, dah gw unbann gausah nangesss...`")
     except UserIdInvalidError:
-        await edit_delete(unbon, "**ERROR! Cok** `Lu ngapain sih??`")
+        await edit_delete(unbon, "**ERROR! Cok**` Lu mau ngapain sih??`")
 
 
 @geez_cmd(pattern="mute(?: |$)(.*)")
@@ -248,7 +248,7 @@ async def spider(spdr):
             spdr, "`Ya gabisa lah tolol... Masa muttte diri sendiri.`"
         )
     if user.id in DEVS:
-        return await edit_or_reply(spdr, "`Yahahaha... gabisa muttte dia kan. orang dia yg buat gw.")
+        return await edit_or_reply(spdr, "`Yahahaha... gabisa muttte dia kan. orang dia yg buat gw, wleee🤪.")
     await edit_or_reply(
         spdr,
         r"**Mampus Gw Muttte!**"
@@ -277,7 +277,7 @@ async def spider(spdr):
                 f"**Aksi:** `Dibisukan oleh {owner}`",
             )
     except UserIdInvalidError:
-        return await edit_delete(spdr, "**ERROR! Cok, Lu ngapain sih??**")
+        return await edit_delete(spdr, "**ERROR! Cok**` Lu mau ngapain sih??`")
 
 
 @geez_cmd(pattern="unmute(?: |$)(.*)")
@@ -299,12 +299,12 @@ async def unmoot(unmot):
         return
 
     if unmute(unmot.chat_id, user.id) is False:
-        return await edit_delete(unmot, "**ERROR!** `Orangnya nggak dimuttte Goblok!`")
+        return await edit_delete(unmot, "**ERROR!** `Orangnya udah dimuttte Goblok!`")
     try:
         await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
         await edit_delete(unmot, "`Tuh, dah gw unmuttte gausah nangess.`")
     except UserIdInvalidError:
-        return await edit_delete(unmot, "**ERROR! Cok**`, Lu ngapain sih??`")
+        return await edit_delete(unmot, "**ERROR! Cok**` Lu mau ngapain sih??`")
 
 
 @geez_handler()

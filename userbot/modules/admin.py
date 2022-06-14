@@ -147,7 +147,7 @@ async def promote(event):
         await event.client(EditAdminRequest(event.chat_id, user.id, new_rights, rank))
     except BadRequestError:
         return await eventman.edit(NO_PERM)
-    await edit_delete(eventman, "[{user.first_name}](tg://user?id={user.id}), `jir jadi Admin.`", 30)
+    await edit_delete(eventman, "`Syukuran, Dia jadi Admin.`", 30)
 
 
 @geez_cmd(pattern="demote(?:\s|$)([\s\S]*)")
@@ -167,12 +167,12 @@ async def demote(event):
         pin_messages=None,
         manage_call=None,
     )
-    rank = "Admin"
+    rank = "admin"
     try:
         await event.client(EditAdminRequest(event.chat_id, user.id, newrights, rank))
     except BadRequestError:
         return await eventman.edit(NO_PERM)
-    await edit_delete(eventman, "[{user.first_name}](tg://user?id={user.id}), `Ciaannn:(... bukan Admin lagi yaaa.`", 30)
+    await edit_delete(eventman, "`Ciaannn:(... bukan Admin lagi yaaa.`", 30)
 
 
 @geez_cmd(pattern="ban(?:\s|$)([\s\S]*)")

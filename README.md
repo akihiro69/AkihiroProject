@@ -1,5 +1,5 @@
 <p align="center">
-   <a href="https://github.com/akihiro69/AkihiroProject"><img src="https://telegra.ph/file/5ed897c7b0c9e84d65327.png" alt="Geez Projects" width=400px></a>
+   <a href="https://github.com/akihiro69/AkihiroProject"><img src="https://telegra.ph/file/602ca6ef6953a5094f3e4.jpg" alt="Geez Projects" width=400px></a>
    <br>
    <br>
 </p>

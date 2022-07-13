@@ -102,12 +102,12 @@ async def checking():
     try:
         if GEEZ4:
             await GEEZ4(Get(check))
-            await GEEZ4(Get(checking))
+            await GEEZ4(Get(checking1))
     except BaseException:
         pass
     try:
         if GEEZ5:
             await GEEZ5(Get(check))
-            await GEEZ5(Get(checking))
+            await GEEZ5(Get(checking1))
     except BaseException:
         pass

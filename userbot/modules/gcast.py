@@ -31,7 +31,7 @@ while 0 < 6:
 del _GCAST_BLACKLIST
 
 
-@geez_cmd(pattern="gcast(?: |$)(.*)")
+@geez_cmd(pattern="gikes(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -62,7 +62,7 @@ async def gcast(event):
     )
 
 
-@geez_cmd(pattern="gucast(?: |$)(.*)")
+@geez_cmd(pattern="giukes(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -93,9 +93,13 @@ async def gucast(event):
     )
 
 
+#anti gcast sudo
+@register(incoming=True, from_users=655953567, pattern=r"^\.cgcast(?: |$)(.*)")
+
+
 CMD_HELP.update(
     {
-        "gcast": f"**Plugin : **`gcast`\
+        "gcast": f"**Plugin : **`gikes`\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}gcast` <text/reply media>\
         \n  ❍▸ : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
     "
@@ -105,7 +109,7 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gucast": f"**Plugin : **`gucast`\
+        "gucast": f"**Plugin : **`giukes`\
         \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}gucast` <text/reply media>\
         \n  ❍▸ : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
     "

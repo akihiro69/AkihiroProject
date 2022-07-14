@@ -99,8 +99,8 @@ async def gucast(event):
 
 CMD_HELP.update(
     {
-        "gcast": f"**Plugin : **`gikes`\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}gcast` <text/reply media>\
+        "gcast": f"**Plugin : **`gcast`\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}gikes` <text/reply media>\
         \n  ❍▸ : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
@@ -109,8 +109,8 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gucast": f"**Plugin : **`giukes`\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}gucast` <text/reply media>\
+        "gucast": f"**Plugin : **`gucast`\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}giukes` <text/reply media>\
         \n  ❍▸ : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
     "
     }

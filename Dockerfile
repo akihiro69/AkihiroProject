@@ -1,6 +1,6 @@
 FROM akihiro69/akihiro:buster
 
-RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/geezprojects/ \
+RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/akihiroprojects/ \
     && chmod 777 /home/akihiroprojects \
     && mkdir /home/akihiroprojects/bin/
 

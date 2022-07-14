@@ -1,4 +1,4 @@
-FROM vckyouubitch/geez:master
+FROM akihiro69/akihiro:buster
 
 RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/geezprojects/ \
     && chmod 777 /home/geezprojects \

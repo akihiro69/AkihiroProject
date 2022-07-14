@@ -1,14 +1,10 @@
 FROM akihiro69/akihiro:buster
 
-RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/akihiroprojects/ \
-RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
-WORKDIR /root/userbot
-
-
+RUN git clone -b master https://github.com/akihiro69/AkihiroProject /home/master/ \
+    && chmod 777 /home/master \
+    && mkdir /home/master/bin/
 RUN pip3 install -r https://raw.githubusercontent.com/akihiro69/AkihiroProject/master/requirements.txt
 
-EXPOSE 80 443
+WORKDIR /home/master
 
-
-CMD ["bash", "start"]
+CMD ["python3", "-m", "userbot"]

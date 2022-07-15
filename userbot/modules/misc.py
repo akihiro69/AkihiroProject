@@ -124,7 +124,7 @@ async def repo_is_here(event):
         f"│`Bot Ver    :` `{BOT_VER}@{branch}`\n"
         f"│`Support    :` [Akihiro Support](t.me/AkihiroSupport)\n"
         f"│`Channel    :` [Channel Support](t.me/AkihiroUpdate)\n"
-        f"│`Owner Repo :` [agung☂̈́](t.me/akihiro69)\n"
+        f"│`Owner Repo :` [Akihiro69](t.me/Akihiro69/5)\n"
         f"├‒─‒──────────────\n"
         f"│𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 : [𝗔𝗸𝗶𝗵𝗶𝗿𝗼 𝗣𝗿𝗼𝗷𝗲𝗰𝘁](https://github.com/akihiro69/AkihiroProject)\n"
         f"╰‒─‒─────────────\n"
